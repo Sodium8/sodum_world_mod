@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/crop",
+  "textures": {
+    "crop": "sodium-world:block/penis_crop_stage0"
+  }
+}

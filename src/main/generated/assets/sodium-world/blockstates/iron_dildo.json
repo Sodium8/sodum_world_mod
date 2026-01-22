@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "sodium-world:block/iron_dildo",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "sodium-world:block/iron_dildo"
+    },
+    "facing=south": {
+      "model": "sodium-world:block/iron_dildo",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "sodium-world:block/iron_dildo",
+      "y": 270
+    }
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_bowl": {
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraft:bowl"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_penis": {
+      "conditions": {
+        "items": [
+          {
+            "items": "sodium-world:penis"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_penis_block": {
+      "conditions": {
+        "items": [
+          {
+            "items": "sodium-world:penis_block"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "sodium-world:ragout_of_penises"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_penis",
+      "has_penis_block",
+      "has_bowl"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "sodium-world:ragout_of_penises"
+    ]
+  }
+}

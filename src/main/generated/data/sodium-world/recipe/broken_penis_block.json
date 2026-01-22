@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "P": {
+      "item": "sodium-world:penis"
+    },
+    "S": {
+      "item": "sodium-world:slut"
+    }
+  },
+  "pattern": [
+    "SPS",
+    "SPS",
+    "PPP"
+  ],
+  "result": {
+    "count": 1,
+    "id": "sodium-world:broken_penis_block"
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_penis": {
+      "conditions": {
+        "items": [
+          {
+            "items": "sodium-world:penis"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_slut": {
+      "conditions": {
+        "items": [
+          {
+            "items": "sodium-world:slut"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "sodium-world:broken_penis_block"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_penis",
+      "has_slut"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "sodium-world:broken_penis_block"
+    ]
+  }
+}

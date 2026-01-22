@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "holding=false": {
+      "model": "sodium-world:block/penis_holder_block"
+    },
+    "holding=true": {
+      "model": "sodium-world:block/penis_holder_block_full"
+    }
+  }
+}

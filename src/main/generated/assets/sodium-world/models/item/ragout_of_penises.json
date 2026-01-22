@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "sodium-world:item/ragout_of_penises"
+  }
+}

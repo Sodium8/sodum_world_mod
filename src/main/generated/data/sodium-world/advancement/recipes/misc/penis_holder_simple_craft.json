@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_penis_block": {
+      "conditions": {
+        "items": [
+          {
+            "items": "sodium-world:penis_block"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "sodium-world:penis_holder_simple_craft"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_penis_block"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "sodium-world:penis_holder_simple_craft"
+    ]
+  }
+}

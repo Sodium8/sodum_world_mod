@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "B": {
+      "item": "sodium-world:penis_block"
+    },
+    "M": {
+      "item": "minecraft:bowl"
+    },
+    "P": {
+      "item": "sodium-world:penis"
+    }
+  },
+  "pattern": [
+    "PBP",
+    "MPM",
+    " M "
+  ],
+  "result": {
+    "count": 1,
+    "id": "sodium-world:ragout_of_penises"
+  }
+}
