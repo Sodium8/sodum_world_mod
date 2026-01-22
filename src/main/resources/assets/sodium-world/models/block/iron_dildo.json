@@ -2,8 +2,8 @@
 	"format_version": "1.9.0",
 	"credit": "Made with Blockbench",
 	"textures": {
-		"0": "pizdozhopnie-siski:block/iron_dildo",
-		"particle": "pizdozhopnie-siski:block/iron_dildo"
+		"0": "sodium-world:block/iron_dildo",
+		"particle": "sodium-world:block/iron_dildo"
 	},
 	"elements": [
 		{

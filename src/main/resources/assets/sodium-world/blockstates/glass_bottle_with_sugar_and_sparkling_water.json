@@ -1,7 +1,7 @@
 {
   "variants": {
     "": {
-      "model": "pizdozhopnie-siski:block/glass_bottle_with_sugar_and_sparkling_water"
+      "model": "sodium-world:block/glass_bottle_with_sugar_and_sparkling_water"
     }
   }
 }

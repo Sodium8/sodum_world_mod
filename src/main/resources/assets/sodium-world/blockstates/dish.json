@@ -1,7 +1,7 @@
 {
   "variants": {
     "": {
-      "model": "pizdozhopnie-siski:block/dish"
+      "model": "sodium-world:block/dish"
     }
   }
 }

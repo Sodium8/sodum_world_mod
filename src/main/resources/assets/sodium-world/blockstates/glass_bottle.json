@@ -1,7 +1,7 @@
 {
   "variants": {
     "": {
-      "model": "pizdozhopnie-siski:block/glass_bottle"
+      "model": "sodium-world:block/glass_bottle"
     }
   }
 }

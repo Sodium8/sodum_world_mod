@@ -3,9 +3,9 @@
 	"credit": "Made with Blockbench",
 	"texture_size": [32, 32],
 	"textures": {
-		"1": "pizdozhopnie-siski:block/dish",
-		"2": "pizdozhopnie-siski:block/dish1",
-		"particle": "pizdozhopnie-siski:block/dish"
+		"1": "sodium-world:block/dish",
+		"2": "sodium-world:block/dish1",
+		"particle": "sodium-world:block/dish"
 	},
 	"elements": [
 		{

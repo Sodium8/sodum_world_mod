@@ -2,9 +2,9 @@
 	"format_version": "1.21.6",
 	"credit": "Made with Blockbench",
 	"textures": {
-		"0": "pizdozhopnie-siski:block/cup",
-		"1": "pizdozhopnie-siski:block/sugar",
-		"particle": "pizdozhopnie-siski:block/cup"
+		"0": "sodium-world:block/cup",
+		"1": "sodium-world:block/sugar",
+		"particle": "sodium-world:block/cup"
 	},
 	"elements": [
 		{
