@@ -1,0 +1,29 @@
+{
+  "type": "minecraft:block",
+  "functions": [
+    {
+      "function": "minecraft:explosion_decay"
+    }
+  ],
+  "pools": [
+    {
+      "bonus_rolls": 0.0,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "conditions": [
+            {
+              "block": "sodium-world:giant_carrot_crop",
+              "condition": "minecraft:block_state_property",
+              "properties": {
+                "age": "5"
+              }
+            }
+          ],
+          "name": "sodium-world:giant_carrot"
+        }
+      ],
+      "rolls": 1.0
+    }
+  ]
+}

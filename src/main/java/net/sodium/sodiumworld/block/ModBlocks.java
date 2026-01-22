@@ -30,6 +30,14 @@ public class ModBlocks {
                     .pistonBehavior(PistonBehavior.DESTROY)
                     .ticksRandomly()
                     .mapColor(MapColor.GOLD)));
+    public static final Block GIANT_CARROT_CROP = registerBlockWithoutItem("giant_carrot_crop",
+            new PenisCropBlock(AbstractBlock.Settings.create()
+                    .noCollision()
+                    .breakInstantly()
+                    .sounds(BlockSoundGroup.CROP)
+                    .pistonBehavior(PistonBehavior.DESTROY)
+                    .ticksRandomly()
+                    .mapColor(MapColor.GOLD)));
     public static final Block PENIS_VIRUS_BLOCK = registerBlock("penis_virus_block", new penis_virus_block(AbstractBlock.Settings.create()));
     public static final Block IRON_DILDO = registerBlock("iron_dildo", new iron_dildo_block(AbstractBlock.Settings.create().strength(1.5f).nonOpaque()));
     public static final Block DISH = registerBlock("dish", new dish(AbstractBlock.Settings.create().strength(0.25f)));

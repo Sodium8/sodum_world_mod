@@ -1,9 +1,11 @@
 {
   "item.sodium-world.penis": "Penis",
   "item.sodium-world.slut": "Slut",
+  "item.sodium-world.giant_carrot": "Giant carrot",
   "item.sodium-world.penis_staff": "Penis staff",
   "item.sodium-world.ragout_of_penises": "Ragout of penises",
   "item.sodium-world.penis_seeds": "Penis seeds",
+  "item.sodium-world.giant_carrot_seeds": "Giant carrot seeds",
   "item.sodium-world.lemon": "Lemon",
   "item.sodium-world.sparkling_water": "Sparkling water",
 
@@ -18,5 +20,8 @@
   "block.sodium-world.penis_holder_block": "Penis holder",
   "block.sodium-world.dish": "Dish",
 
-  "itemgroup.sodium-world.sodium_items": "Pizdozhopnie items"
+  "itemgroup.sodium-world.sodium_items": "Pizdozhopnie items",
+
+  "key.category.sodiumworld": "Sodium world",
+  "key.sodiumworld.play_sound": "Play sound"
 }

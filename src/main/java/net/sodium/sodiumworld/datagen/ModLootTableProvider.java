@@ -19,6 +19,7 @@ import net.minecraft.predicate.StatePredicate;
 import net.minecraft.registry.RegistryKeys;
 import net.minecraft.registry.RegistryWrapper;
 import net.sodium.sodiumworld.block.ModBlocks;
+import net.sodium.sodiumworld.block.custom.GiantCarrotCropBlock;
 import net.sodium.sodiumworld.block.custom.PenisCropBlock;
 import net.sodium.sodiumworld.item.ModItems;
 
@@ -42,12 +43,35 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
         BlockStatePropertyLootCondition.Builder builder2 = BlockStatePropertyLootCondition.builder(ModBlocks.PENIS_CROP)
                 .properties(StatePredicate.Builder.create().exactMatch(PenisCropBlock.AGE, PenisCropBlock.MAX_AGE));
         this.addDrop(ModBlocks.PENIS_CROP, this.multipleCropDrops(ModBlocks.PENIS_CROP, ModItems.PENIS, ModItems.PENIS_SEEDS, builder2));
+        BlockStatePropertyLootCondition.Builder builder3 = BlockStatePropertyLootCondition.builder(ModBlocks.GIANT_CARROT_CROP)
+                .properties(StatePredicate.Builder.create().exactMatch(GiantCarrotCropBlock.AGE, GiantCarrotCropBlock.MAX_AGE));
+        this.addDrop(ModBlocks.GIANT_CARROT_CROP, justDrop1(ModBlocks.GIANT_CARROT_CROP, ModItems.GIANT_CARROT, builder3));
     }
     public LootTable.Builder multipleOreDrops(Block drop, Item item, float minDrops, float maxDrops) {
         RegistryWrapper.Impl<Enchantment> impl = this.registryLookup.getWrapperOrThrow(RegistryKeys.ENCHANTMENT);
         return this.dropsWithSilkTouch(drop, this.applyExplosionDecay(drop, ((LeafEntry.Builder<?>)
                 ItemEntry.builder(item).apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(minDrops, maxDrops))))
                 .apply(ApplyBonusLootFunction.oreDrops(impl.getOrThrow(Enchantments.FORTUNE)))));
+    }
+    public LootTable.Builder justDrop1(Block block, Item to_drop, LootCondition.Builder condition) {
+        return this.applyExplosionDecay(
+                block,
+                LootTable.builder()
+                        .pool(LootPool.builder().with(ItemEntry.builder(to_drop).conditionally(condition)))
+
+        );
+    }
+    public LootTable.Builder justDrop2(Block block, Item to_drop1, Item to_drop2, LootCondition.Builder condition) {
+        return this.applyExplosionDecay(
+                block,
+                LootTable.builder()
+                        .pool(LootPool.builder().with(ItemEntry.builder(to_drop1).conditionally(condition)))
+                        .pool(
+                                LootPool.builder()
+                                        .conditionally(condition)
+                                        .with(ItemEntry.builder(to_drop2).conditionally(condition))
+                        )
+        );
     }
     public LootTable.Builder multipleCropDrops(Block crop, Item product, Item seeds, LootCondition.Builder condition) {
         RegistryWrapper.Impl<Enchantment> impl = this.registryLookup.getWrapperOrThrow(RegistryKeys.ENCHANTMENT);
