@@ -4,10 +4,13 @@ import net.fabricmc.api.ModInitializer;
 
 import net.fabricmc.fabric.api.event.lifecycle.v1.ServerTickEvents;
 import net.fabricmc.fabric.api.networking.v1.PayloadTypeRegistry;
+import net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRegistry;
 import net.fabricmc.fabric.api.registry.CompostingChanceRegistry;
 import net.sodium.sodiumworld.block.ModBlocks;
 import net.sodium.sodiumworld.block.entity.ModBlockEntities;
 import net.sodium.sodiumworld.component.ModDataComponentTypes;
+import net.sodium.sodiumworld.entity.ModEntities;
+import net.sodium.sodiumworld.entity.custom.CarrotCarEntity;
 import net.sodium.sodiumworld.event.PlayerTickHandler;
 import net.sodium.sodiumworld.item.ModItemGroups;
 import net.sodium.sodiumworld.item.ModItems;
@@ -34,9 +37,11 @@ public class SodiumWorld implements ModInitializer {
 		ModBlockEntities.registerBlockEntities();
 		ModBlocks.registerModBlocks();
 		ModItems.registerModItems();
+		ModEntities.registerModEntities();
 		ModDataComponentTypes.registerDataComponentTypes();
 		CompostingChanceRegistry.INSTANCE.add(ModItems.PENIS_SEEDS, 0.2f);
 		ModWorldGeneration.generateModWorldGen();
 		ServerTickEvents.START_SERVER_TICK.register(new PlayerTickHandler());
+		FabricDefaultAttributeRegistry.register(ModEntities.CARROT_CAR, CarrotCarEntity.createAttributes());
 	}
 }

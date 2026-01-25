@@ -1,18 +1,15 @@
 package net.sodium.sodiumworld.item.custom;
 
-import net.fabricmc.fabric.api.networking.v1.ServerPlayNetworking;
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemUsageContext;
 import net.minecraft.item.tooltip.TooltipType;
-import net.minecraft.server.network.ServerPlayerEntity;
 import net.minecraft.text.Text;
 import net.minecraft.util.ActionResult;
 import net.minecraft.world.World;
 import net.sodium.sodiumworld.block.ModBlocks;
 import net.sodium.sodiumworld.component.ModDataComponentTypes;
-import net.sodium.sodiumworld.networking.packet.SyncManaS2CPacket;
 import net.sodium.sodiumworld.util.IEntityDataSaver;
 import net.sodium.sodiumworld.util.ManaData;
 

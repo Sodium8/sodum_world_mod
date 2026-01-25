@@ -2,6 +2,7 @@ package net.sodium.sodiumworld;
 
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
+import net.fabricmc.fabric.api.client.rendering.v1.EntityModelLayerRegistry;
 import net.fabricmc.fabric.api.client.rendering.v1.EntityRendererRegistry;
 import net.fabricmc.fabric.api.client.rendering.v1.HudRenderCallback;
 import net.fabricmc.fabric.api.networking.v1.PayloadTypeRegistry;
@@ -12,6 +13,8 @@ import net.sodium.sodiumworld.block.entity.ModBlockEntities;
 import net.sodium.sodiumworld.block.entity.rederer.DishBlockEntityRenderer;
 import net.sodium.sodiumworld.client.ManaHudOverlay;
 import net.sodium.sodiumworld.entity.ModEntities;
+import net.sodium.sodiumworld.entity.client.CarrotCarModel;
+import net.sodium.sodiumworld.entity.client.CarrotCarRenderer;
 import net.sodium.sodiumworld.entity.client.DildoRenderer;
 import net.sodium.sodiumworld.event.KeyInputHandler;
 import net.sodium.sodiumworld.networking.ModMessages;
@@ -27,5 +30,7 @@ public class SodiumWorldClient implements ClientModInitializer {
         KeyInputHandler.register();
         HudRenderCallback.EVENT.register(new ManaHudOverlay());
         ModMessages.registerS2CPackets();
+        EntityModelLayerRegistry.registerModelLayer(CarrotCarModel.CAR_CARROT, CarrotCarModel::getTexturedModelData);
+        EntityRendererRegistry.register(ModEntities.CARROT_CAR, CarrotCarRenderer::new);
     }
 }
