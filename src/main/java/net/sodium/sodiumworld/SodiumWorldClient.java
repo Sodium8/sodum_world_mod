@@ -13,9 +13,7 @@ import net.sodium.sodiumworld.block.entity.ModBlockEntities;
 import net.sodium.sodiumworld.block.entity.rederer.DishBlockEntityRenderer;
 import net.sodium.sodiumworld.client.ManaHudOverlay;
 import net.sodium.sodiumworld.entity.ModEntities;
-import net.sodium.sodiumworld.entity.client.CarrotCarModel;
-import net.sodium.sodiumworld.entity.client.CarrotCarRenderer;
-import net.sodium.sodiumworld.entity.client.DildoRenderer;
+import net.sodium.sodiumworld.entity.client.*;
 import net.sodium.sodiumworld.event.KeyInputHandler;
 import net.sodium.sodiumworld.networking.ModMessages;
 import net.sodium.sodiumworld.networking.packet.SpawnPenisC2SPacket;
@@ -32,5 +30,7 @@ public class SodiumWorldClient implements ClientModInitializer {
         ModMessages.registerS2CPackets();
         EntityModelLayerRegistry.registerModelLayer(CarrotCarModel.CAR_CARROT, CarrotCarModel::getTexturedModelData);
         EntityRendererRegistry.register(ModEntities.CARROT_CAR, CarrotCarRenderer::new);
+        EntityModelLayerRegistry.registerModelLayer(HitlerModel.HITLER, HitlerModel::getTexturedModelData);
+        EntityRendererRegistry.register(ModEntities.HITLER, HitlerRenderer::new);
     }
 }

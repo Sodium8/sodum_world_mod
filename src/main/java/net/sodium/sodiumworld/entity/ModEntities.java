@@ -8,6 +8,7 @@ import net.minecraft.util.Identifier;
 import net.sodium.sodiumworld.SodiumWorld;
 import net.sodium.sodiumworld.entity.custom.DildoEntity;
 import net.sodium.sodiumworld.entity.custom.CarrotCarEntity;
+import net.sodium.sodiumworld.entity.custom.HitlerEntity;
 
 public class ModEntities
 {
@@ -18,6 +19,10 @@ public class ModEntities
     public static final EntityType<CarrotCarEntity> CARROT_CAR = Registry.register(Registries.ENTITY_TYPE,
             Identifier.of(SodiumWorld.MOD_ID, "carrot_car_entity"),
             EntityType.Builder.create(CarrotCarEntity::new, SpawnGroup.MISC)
+                    .dimensions(0.5f, 0.5f).build());
+    public static final EntityType<HitlerEntity> HITLER = Registry.register(Registries.ENTITY_TYPE,
+            Identifier.of(SodiumWorld.MOD_ID, "hitler_entity"),
+            EntityType.Builder.create(HitlerEntity::new, SpawnGroup.MISC)
                     .dimensions(0.5f, 0.5f).build());
 
 
