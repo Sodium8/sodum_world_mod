@@ -25,6 +25,7 @@ public class ModItemGroups {
                         entries.add(ModItems.GIANT_CARROT_SEEDS);
                         entries.add(ModItems.GIANT_CARROT);
                         entries.add(ModItems.RAGOUT_OF_PENISES);
+                        entries.add(ModItems.BLYAT);
                         entries.add(ModBlocks.PENIS_BLOCK);
                         entries.add(ModBlocks.PENIS_HOLDER_BLOCK);
                         entries.add(ModBlocks.BROKEN_PENIS_BLOCK);
