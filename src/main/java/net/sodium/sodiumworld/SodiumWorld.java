@@ -12,6 +12,7 @@ import net.sodium.sodiumworld.component.ModDataComponentTypes;
 import net.sodium.sodiumworld.entity.ModEntities;
 import net.sodium.sodiumworld.entity.custom.CarrotCarEntity;
 import net.sodium.sodiumworld.entity.custom.HitlerEntity;
+import net.sodium.sodiumworld.entity.custom.PortalEntity;
 import net.sodium.sodiumworld.event.PlayerTickHandler;
 import net.sodium.sodiumworld.item.ModItemGroups;
 import net.sodium.sodiumworld.item.ModItems;
@@ -45,5 +46,6 @@ public class SodiumWorld implements ModInitializer {
 		ServerTickEvents.START_SERVER_TICK.register(new PlayerTickHandler());
 		FabricDefaultAttributeRegistry.register(ModEntities.CARROT_CAR, CarrotCarEntity.createAttributes());
 		FabricDefaultAttributeRegistry.register(ModEntities.HITLER, HitlerEntity.createAttributes());
+		FabricDefaultAttributeRegistry.register(ModEntities.PORTAL, PortalEntity.createAttributes());
 	}
 }

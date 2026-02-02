@@ -1,4 +1,4 @@
-package net.sodium.sodiumworld.entity.client;
+package net.sodium.sodiumworld.entity.client.Dildo;
 
 import net.minecraft.client.render.Frustum;
 import net.minecraft.client.render.entity.EntityRenderer;

@@ -1,4 +1,4 @@
-package net.sodium.sodiumworld.entity.client;
+package net.sodium.sodiumworld.entity.client.Hitler;
 
 import net.minecraft.client.render.entity.EntityRendererFactory;
 import net.minecraft.client.render.entity.MobEntityRenderer;

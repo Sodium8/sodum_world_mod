@@ -5,7 +5,6 @@ import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
 import net.fabricmc.fabric.api.client.rendering.v1.EntityModelLayerRegistry;
 import net.fabricmc.fabric.api.client.rendering.v1.EntityRendererRegistry;
 import net.fabricmc.fabric.api.client.rendering.v1.HudRenderCallback;
-import net.fabricmc.fabric.api.networking.v1.PayloadTypeRegistry;
 import net.minecraft.client.render.RenderLayer;
 import net.minecraft.client.render.block.entity.BlockEntityRendererFactories;
 import net.sodium.sodiumworld.block.ModBlocks;
@@ -13,11 +12,15 @@ import net.sodium.sodiumworld.block.entity.ModBlockEntities;
 import net.sodium.sodiumworld.block.entity.rederer.DishBlockEntityRenderer;
 import net.sodium.sodiumworld.client.ManaHudOverlay;
 import net.sodium.sodiumworld.entity.ModEntities;
-import net.sodium.sodiumworld.entity.client.*;
+import net.sodium.sodiumworld.entity.client.CarrotCar.CarrotCarModel;
+import net.sodium.sodiumworld.entity.client.CarrotCar.CarrotCarRenderer;
+import net.sodium.sodiumworld.entity.client.Dildo.DildoRenderer;
+import net.sodium.sodiumworld.entity.client.Hitler.HitlerModel;
+import net.sodium.sodiumworld.entity.client.Hitler.HitlerRenderer;
+import net.sodium.sodiumworld.entity.client.Portal.PortalModel;
+import net.sodium.sodiumworld.entity.client.Portal.PortalRenderer;
 import net.sodium.sodiumworld.event.KeyInputHandler;
 import net.sodium.sodiumworld.networking.ModMessages;
-import net.sodium.sodiumworld.networking.packet.SpawnPenisC2SPacket;
-import net.sodium.sodiumworld.networking.packet.SyncManaS2CPacket;
 
 public class SodiumWorldClient implements ClientModInitializer {
     @Override
@@ -32,5 +35,6 @@ public class SodiumWorldClient implements ClientModInitializer {
         EntityRendererRegistry.register(ModEntities.CARROT_CAR, CarrotCarRenderer::new);
         EntityModelLayerRegistry.registerModelLayer(HitlerModel.HITLER, HitlerModel::getTexturedModelData);
         EntityRendererRegistry.register(ModEntities.HITLER, HitlerRenderer::new);
+        EntityRendererRegistry.register(ModEntities.PORTAL, PortalRenderer::new);
     }
 }

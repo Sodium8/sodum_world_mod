@@ -1,16 +1,13 @@
 package net.sodium.sodiumworld.entity.custom;
 
-import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.ai.goal.*;
 import net.minecraft.entity.attribute.DefaultAttributeContainer;
 import net.minecraft.entity.attribute.EntityAttributes;
 import net.minecraft.entity.mob.MobEntity;
-import net.minecraft.entity.mob.PathAwareEntity;
 import net.minecraft.entity.passive.AnimalEntity;
 import net.minecraft.entity.passive.PassiveEntity;
 import net.minecraft.entity.passive.PigEntity;
-import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.recipe.Ingredient;
 import net.minecraft.server.world.ServerWorld;
@@ -18,9 +15,6 @@ import net.minecraft.world.World;
 import net.sodium.sodiumworld.entity.custom.goals.FollowEntityGoal;
 import net.sodium.sodiumworld.item.ModItems;
 import org.jetbrains.annotations.Nullable;
-
-import java.util.EnumSet;
-import java.util.List;
 
 public class HitlerEntity extends AnimalEntity{
 
@@ -38,7 +32,7 @@ public class HitlerEntity extends AnimalEntity{
     protected void initGoals() {
         this.goalSelector.add(0, new SwimGoal(this));
 
-        this.goalSelector.add(1, new TemptGoal(this, 1.1D, Ingredient.ofItems(ModItems.PENIS), false));
+        this.goalSelector.add(1, new TemptGoal(this, 3f, Ingredient.ofItems(ModItems.PENIS), false));
 
         this.goalSelector.add(2, new FollowEntityGoal<>(this, PigEntity.class, 3f, 16f, 1f));
 

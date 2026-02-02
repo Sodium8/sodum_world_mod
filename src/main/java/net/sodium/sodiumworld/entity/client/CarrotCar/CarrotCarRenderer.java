@@ -1,4 +1,4 @@
-package net.sodium.sodiumworld.entity.client;
+package net.sodium.sodiumworld.entity.client.CarrotCar;
 
 import net.minecraft.client.render.VertexConsumerProvider;
 import net.minecraft.client.render.entity.EntityRendererFactory;

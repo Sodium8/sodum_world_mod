@@ -9,6 +9,7 @@ import net.sodium.sodiumworld.SodiumWorld;
 import net.sodium.sodiumworld.entity.custom.DildoEntity;
 import net.sodium.sodiumworld.entity.custom.CarrotCarEntity;
 import net.sodium.sodiumworld.entity.custom.HitlerEntity;
+import net.sodium.sodiumworld.entity.custom.PortalEntity;
 
 public class ModEntities
 {
@@ -23,7 +24,11 @@ public class ModEntities
     public static final EntityType<HitlerEntity> HITLER = Registry.register(Registries.ENTITY_TYPE,
             Identifier.of(SodiumWorld.MOD_ID, "hitler_entity"),
             EntityType.Builder.create(HitlerEntity::new, SpawnGroup.MISC)
-                    .dimensions(0.5f, 0.5f).build());
+                    .dimensions(1f, 2f).build());
+    public static final EntityType<PortalEntity> PORTAL = Registry.register(Registries.ENTITY_TYPE,
+            Identifier.of(SodiumWorld.MOD_ID, "portal_entity"),
+            EntityType.Builder.create(PortalEntity::new, SpawnGroup.MISC)
+                    .dimensions(0.1f, 0.1f).build());
 
 
     public static void registerModEntities() {

@@ -1,4 +1,4 @@
-package net.sodium.sodiumworld.entity.client;
+package net.sodium.sodiumworld.entity.client.CarrotCar;
 
 import net.minecraft.client.render.entity.animation.Animation;
 import net.minecraft.client.render.entity.animation.AnimationHelper;
