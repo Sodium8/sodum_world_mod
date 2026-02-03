@@ -35,6 +35,7 @@ public class SodiumWorldClient implements ClientModInitializer {
         EntityRendererRegistry.register(ModEntities.CARROT_CAR, CarrotCarRenderer::new);
         EntityModelLayerRegistry.registerModelLayer(HitlerModel.HITLER, HitlerModel::getTexturedModelData);
         EntityRendererRegistry.register(ModEntities.HITLER, HitlerRenderer::new);
+        EntityModelLayerRegistry.registerModelLayer(PortalModel.PORTAL, PortalModel::getTexturedModelData);
         EntityRendererRegistry.register(ModEntities.PORTAL, PortalRenderer::new);
     }
 }

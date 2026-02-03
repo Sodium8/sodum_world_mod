@@ -28,7 +28,8 @@ public class ModEntities
     public static final EntityType<PortalEntity> PORTAL = Registry.register(Registries.ENTITY_TYPE,
             Identifier.of(SodiumWorld.MOD_ID, "portal_entity"),
             EntityType.Builder.create(PortalEntity::new, SpawnGroup.MISC)
-                    .dimensions(0.1f, 0.1f).build());
+                    .dimensions(1.625f, 2.1875f)
+                    .build());
 
 
     public static void registerModEntities() {
