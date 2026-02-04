@@ -1,4 +1,4 @@
-// 1.21	2026-01-28T21:56:02.9535836	Sodium world/Model Definitions
+// 1.21	2026-02-04T20:50:20.3183058	Sodium world/Model Definitions
 6c08c62ccc4182545470201d29ca1292ceee261b assets\sodium-world\models\item\penis_seeds.json
 26dc5b1c76d8f8909afab7eb9beef58f1a028aad assets\sodium-world\models\item\ragout_of_penises.json
 0f92a61e7fa1d541aa27039f29ec2ec51adaba52 assets\sodium-world\blockstates\penis_holder_block.json
@@ -19,6 +19,7 @@ f8da4c0c31137de7af1c3e44f175f2324677cb78 assets\sodium-world\models\block\penis_
 507134ffd142ed3133e55ee8c7f53624d6a19f26 assets\sodium-world\models\block\penis_crop_stage2.json
 7cd69df31dc39a7aa99800c5909e68c6356de0e7 assets\sodium-world\models\block\penis_virus_block.json
 0ae546098774b2c86566f816ce17d567b8d33c0d assets\sodium-world\models\item\penis_staff.json
+9d1486602fdf053fdc0866dca4a9203b4c19503d assets\sodium-world\models\item\portal_gun.json
 c7e78c58579cbf7b5b439b6fd30f71f23690ef6a assets\sodium-world\models\item\blyat.json
 1d11d69210d489279dfcada770c1524d6b2dde8f assets\sodium-world\models\block\penis_crop_stage0.json
 82e1f27b8eda35f178ddb23a6ac42589dc07f097 assets\sodium-world\models\block\penis_crop_stage3.json

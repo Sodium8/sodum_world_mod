@@ -17,6 +17,7 @@ import net.sodium.sodiumworld.event.PlayerTickHandler;
 import net.sodium.sodiumworld.item.ModItemGroups;
 import net.sodium.sodiumworld.item.ModItems;
 import net.sodium.sodiumworld.networking.ModMessages;
+import net.sodium.sodiumworld.networking.packet.ChangeJopaRootPosS2CPacket;
 import net.sodium.sodiumworld.networking.packet.SpawnPenisC2SPacket;
 import net.sodium.sodiumworld.networking.packet.SyncManaS2CPacket;
 import net.sodium.sodiumworld.sound.ModSounds;
@@ -34,6 +35,7 @@ public class SodiumWorld implements ModInitializer {
 		ModSounds.registerSounds();
 		PayloadTypeRegistry.playC2S().register(SpawnPenisC2SPacket.ID, SpawnPenisC2SPacket.CODEC);
 		PayloadTypeRegistry.playS2C().register(SyncManaS2CPacket.ID, SyncManaS2CPacket.CODEC);
+		PayloadTypeRegistry.playS2C().register(ChangeJopaRootPosS2CPacket.ID, ChangeJopaRootPosS2CPacket.CODEC);
 		ModMessages.registerC2SPackets();
 		ModItemGroups.registerItemGroups();
 		ModBlockEntities.registerBlockEntities();
@@ -46,6 +48,5 @@ public class SodiumWorld implements ModInitializer {
 		ServerTickEvents.START_SERVER_TICK.register(new PlayerTickHandler());
 		FabricDefaultAttributeRegistry.register(ModEntities.CARROT_CAR, CarrotCarEntity.createAttributes());
 		FabricDefaultAttributeRegistry.register(ModEntities.HITLER, HitlerEntity.createAttributes());
-		FabricDefaultAttributeRegistry.register(ModEntities.PORTAL, PortalEntity.createAttributes());
 	}
 }

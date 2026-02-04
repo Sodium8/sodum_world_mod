@@ -2,14 +2,14 @@ package net.sodium.sodiumworld.entity.client.Portal;
 
 import net.minecraft.client.model.*;
 import net.minecraft.client.render.VertexConsumer;
+import net.minecraft.client.render.entity.model.EntityModel;
 import net.minecraft.client.render.entity.model.EntityModelLayer;
-import net.minecraft.client.render.entity.model.SinglePartEntityModel;
 import net.minecraft.client.util.math.MatrixStack;
 import net.minecraft.util.Identifier;
 import net.sodium.sodiumworld.SodiumWorld;
 import net.sodium.sodiumworld.entity.custom.PortalEntity;
 
-public class PortalModel <T extends PortalEntity> extends SinglePartEntityModel<T> {
+public class PortalModel <T extends PortalEntity> extends EntityModel<T> {
     public static final EntityModelLayer PORTAL = new EntityModelLayer(Identifier.of(SodiumWorld.MOD_ID, "portal"), "main");
     private final ModelPart bone;
     private final ModelPart root;
@@ -31,16 +31,12 @@ public class PortalModel <T extends PortalEntity> extends SinglePartEntityModel<
     }
     @Override
     public void render(MatrixStack matrices, VertexConsumer vertexConsumer, int light, int overlay, int color) {
-        bone.render(matrices, vertexConsumer, light, overlay, color);
+        root.render(matrices, vertexConsumer, light, overlay, color);
     }
 
-    @Override
-    public ModelPart getPart() {
-        return this.root;
-    }
 
     @Override
     public void setAngles(T entity, float limbAngle, float limbDistance, float animationProgress, float headYaw, float headPitch) {
-        this.getPart().traverse().forEach(ModelPart::resetTransform);
+
     }
 }

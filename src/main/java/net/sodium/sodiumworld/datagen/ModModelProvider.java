@@ -34,6 +34,7 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.GIANT_CARROT_SEEDS, Models.GENERATED);
         itemModelGenerator.register(ModItems.BLYAT, Models.GENERATED);
         itemModelGenerator.register(ModItems.SPARKLING_WATER, Models.GENERATED);
+        itemModelGenerator.register(ModItems.PORTAL_GUN, Models.GENERATED);
         itemModelGenerator.register(ModItems.LEMON, Models.GENERATED);
         itemModelGenerator.register(ModItems.RAGOUT_OF_PENISES, Models.GENERATED);
         itemModelGenerator.register(ModItems.PENIS_STAFF, Models.GENERATED);

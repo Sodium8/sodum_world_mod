@@ -19,6 +19,8 @@ import net.sodium.sodiumworld.entity.client.Hitler.HitlerModel;
 import net.sodium.sodiumworld.entity.client.Hitler.HitlerRenderer;
 import net.sodium.sodiumworld.entity.client.Portal.PortalModel;
 import net.sodium.sodiumworld.entity.client.Portal.PortalRenderer;
+import net.sodium.sodiumworld.entity.client.jopa.JopaModel;
+import net.sodium.sodiumworld.entity.client.jopa.JopaRenderer;
 import net.sodium.sodiumworld.event.KeyInputHandler;
 import net.sodium.sodiumworld.networking.ModMessages;
 
@@ -37,5 +39,7 @@ public class SodiumWorldClient implements ClientModInitializer {
         EntityRendererRegistry.register(ModEntities.HITLER, HitlerRenderer::new);
         EntityModelLayerRegistry.registerModelLayer(PortalModel.PORTAL, PortalModel::getTexturedModelData);
         EntityRendererRegistry.register(ModEntities.PORTAL, PortalRenderer::new);
+        EntityModelLayerRegistry.registerModelLayer(JopaModel.JOPA, JopaModel::getTexturedModelData);
+        EntityRendererRegistry.register(ModEntities.JOPA, JopaRenderer::new);
     }
 }

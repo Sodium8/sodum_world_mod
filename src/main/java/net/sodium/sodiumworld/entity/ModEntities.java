@@ -1,15 +1,15 @@
 package net.sodium.sodiumworld.entity;
 
+import net.fabricmc.fabric.api.object.builder.v1.entity.FabricEntityTypeBuilder;
+import net.minecraft.entity.EntityDimensions;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.SpawnGroup;
+import net.minecraft.entity.decoration.DisplayEntity;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
 import net.sodium.sodiumworld.SodiumWorld;
-import net.sodium.sodiumworld.entity.custom.DildoEntity;
-import net.sodium.sodiumworld.entity.custom.CarrotCarEntity;
-import net.sodium.sodiumworld.entity.custom.HitlerEntity;
-import net.sodium.sodiumworld.entity.custom.PortalEntity;
+import net.sodium.sodiumworld.entity.custom.*;
 
 public class ModEntities
 {
@@ -25,11 +25,19 @@ public class ModEntities
             Identifier.of(SodiumWorld.MOD_ID, "hitler_entity"),
             EntityType.Builder.create(HitlerEntity::new, SpawnGroup.MISC)
                     .dimensions(1f, 2f).build());
-    public static final EntityType<PortalEntity> PORTAL = Registry.register(Registries.ENTITY_TYPE,
-            Identifier.of(SodiumWorld.MOD_ID, "portal_entity"),
+    public static final EntityType<PortalEntity> PORTAL = Registry.register(
+            Registries.ENTITY_TYPE,
+            Identifier.of(SodiumWorld.MOD_ID, "portal"),
             EntityType.Builder.create(PortalEntity::new, SpawnGroup.MISC)
                     .dimensions(1.625f, 2.1875f)
-                    .build());
+                    .build()
+    );
+    public static final EntityType<JopaEntity> JOPA = Registry.register(
+            Registries.ENTITY_TYPE,
+            Identifier.of(SodiumWorld.MOD_ID, "jopa"),
+            EntityType.Builder.create(JopaEntity::new, SpawnGroup.MISC)
+                    .build()
+    );
 
 
     public static void registerModEntities() {
