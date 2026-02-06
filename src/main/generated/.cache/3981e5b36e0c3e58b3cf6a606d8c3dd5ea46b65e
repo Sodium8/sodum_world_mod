@@ -1,4 +1,4 @@
-// 1.21	2026-02-06T13:34:33.8173887	Sodium world/Block Loot Tables
+// 1.21	2026-02-06T19:47:30.6797086	Sodium world/Block Loot Tables
 a0a601a13bf3d83b5311423157ddbc12b8e8d482 data\sodium-world\loot_table\blocks\dish.json
 5f0b3da320b31e621a68f1d496cc260cca08053e data\sodium-world\loot_table\blocks\glass_bottle_with_sugar.json
 2e78a25eab6e4e2c0fccb79b345ce9c77dac3fb2 data\sodium-world\loot_table\blocks\iron_dildo.json
@@ -7,6 +7,7 @@ a0a601a13bf3d83b5311423157ddbc12b8e8d482 data\sodium-world\loot_table\blocks\dis
 74296666c4267b0a184723f51edf23d0b2e766d7 data\sodium-world\loot_table\blocks\glass_bottle_with_sugar_and_sparkling_water.json
 79dafec5ffbad727a25251cde2c1ca4480f980c5 data\sodium-world\loot_table\blocks\giant_carrot_crop.json
 6705fe892dd5687144f7e597b4db8566138e048a data\sodium-world\loot_table\blocks\broken_penis_block.json
+8895188e9adb0cbc25d7a43d18bf9167ce80c5d8 data\sodium-world\loot_table\blocks\chalk_block.json
 dd862ccba463a1b7a07b6c67f74781e51af91d34 data\sodium-world\loot_table\blocks\glass_bottle_with_lemonade.json
 69881c803a454ec6b4f462d568ad4fa0b7944a7d data\sodium-world\loot_table\blocks\lemon_leaves.json
 b7c4d9a386f6de4759e30ef3c0a5d678d007e9cf data\sodium-world\loot_table\blocks\penis_block.json

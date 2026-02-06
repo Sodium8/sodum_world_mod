@@ -5,20 +5,35 @@ import net.minecraft.registry.RegistryKey;
 import net.minecraft.registry.RegistryKeys;
 import net.minecraft.registry.entry.RegistryEntry;
 import net.minecraft.util.Identifier;
-import net.minecraft.world.gen.feature.ConfiguredFeature;
-import net.minecraft.world.gen.feature.Feature;
-import net.minecraft.world.gen.feature.FeatureConfig;
-import net.minecraft.world.gen.feature.PlacedFeature;
-import net.minecraft.world.gen.placementmodifier.PlacementModifier;
+import net.minecraft.world.gen.feature.*;
+import net.minecraft.world.gen.placementmodifier.*;
 import net.sodium.sodiumworld.SodiumWorld;
+import net.sodium.sodiumworld.block.ModBlocks;
 
 import java.util.List;
 
 public class ModPlacedFeatures {
 
+    public static final RegistryKey<PlacedFeature> LEMONWOOD_PLACED_KEY = registerKey("lemonwood_placed");
+    public static final RegistryKey<PlacedFeature> CHALK_BEACH_PATCH_PLACED =
+            registerKey("chalk_beach_patch_placed");
     public static void bootstrap(Registerable<PlacedFeature> context) {
         var configuredFeatures = context.getRegistryLookup(RegistryKeys.CONFIGURED_FEATURE);
+        register(context, LEMONWOOD_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.LEMON_WOOD_KEY),
+                VegetationPlacedFeatures.treeModifiersWithWouldSurvive(
+                        PlacedFeatures.createCountExtraModifier(1, 0.005f, 1), ModBlocks.LEMON_SAPLING));
 
+        var entry = context.getRegistryLookup(RegistryKeys.CONFIGURED_FEATURE)
+                .getOrThrow(ModConfiguredFeatures.CHALK_BEACH_KEY);
+
+        register(context, CHALK_BEACH_PATCH_PLACED, entry,
+                List.of(
+                        CountPlacementModifier.of(1),
+                        RarityFilterPlacementModifier.of(8),
+                        SquarePlacementModifier.of(),
+                        PlacedFeatures.MOTION_BLOCKING_HEIGHTMAP,
+                        BiomePlacementModifier.of()
+                ));
     }
 
     public static RegistryKey<PlacedFeature> registerKey(String name) {

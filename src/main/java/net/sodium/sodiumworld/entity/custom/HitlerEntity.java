@@ -36,7 +36,7 @@ public class HitlerEntity extends AnimalEntity{
 
         this.goalSelector.add(2, new FollowEntityGoal<>(this, PigEntity.class, 3f, 16f, 1f));
 
-        this.goalSelector.add(3, new WanderAroundFarGoal(this, 1.0D));
+        this.goalSelector.add(3, new WanderAroundFarGoal(this, 3f));
 
         this.goalSelector.add(4, new LookAroundGoal(this));
     }

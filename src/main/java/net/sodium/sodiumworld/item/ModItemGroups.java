@@ -36,6 +36,7 @@ public class ModItemGroups {
                         entries.add(ModBlocks.PENIS_VIRUS_BLOCK);
                         entries.add(ModBlocks.DISH);
                         entries.add(ModBlocks.GLASS_BOTTLE);
+                        entries.add(ModBlocks.CHALK);
                         entries.add(ModBlocks.GLASS_BOTTLE_WITH_SUGAR);
                         entries.add(ModBlocks.GLASS_BOTTLE_WITH_SUGAR_AND_SPARKLING_WATER);
                         entries.add(ModBlocks.GLASS_BOTTLE_WITH_LEMONADE);

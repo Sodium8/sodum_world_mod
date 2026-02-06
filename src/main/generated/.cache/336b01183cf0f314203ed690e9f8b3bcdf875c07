@@ -1,10 +1,11 @@
-// 1.21	2026-02-06T13:34:33.816388	Sodium world/Model Definitions
+// 1.21	2026-02-06T19:47:30.6787049	Sodium world/Model Definitions
 6c08c62ccc4182545470201d29ca1292ceee261b assets\sodium-world\models\item\penis_seeds.json
 7dc58deb9e8edc878356a974c418d5737a6dbc86 assets\sodium-world\models\item\lemon_sapling.json
 26dc5b1c76d8f8909afab7eb9beef58f1a028aad assets\sodium-world\models\item\ragout_of_penises.json
 0f92a61e7fa1d541aa27039f29ec2ec51adaba52 assets\sodium-world\blockstates\penis_holder_block.json
 91196c97e51cc8dad0b8e1ab3614f6c9dc91831d assets\sodium-world\models\block\penis_holder_block_full.json
 52e664bddaef7bcaf421a903d3dab03e9b61dc36 assets\sodium-world\models\item\broken_penis_block.json
+9870972f89ca19210f4da81283fbc68ec18d4594 assets\sodium-world\models\item\chalk_block.json
 2060127faff4e6c504088538e486dd80d84ef689 assets\sodium-world\blockstates\lemon_sapling.json
 e583a3149245418db6d13ab2ab92d1d8624f99d1 assets\sodium-world\models\item\lemon_leaves.json
 37f3068e2083cb522c01ee830d841fa625899cac assets\sodium-world\blockstates\penis_block.json
@@ -15,10 +16,11 @@ b45799a9078f2ee8389c9d4e9918166d02dfbfbe assets\sodium-world\models\item\penis.j
 4bd57d03d1354635ac200485bc16f4883b6fe261 assets\sodium-world\models\item\iron_dildo.json
 935e174b8b91412642d98b50f5fb917bbfd7f85d assets\sodium-world\models\block\penis_crop_stage1.json
 0d85642538c05983fef99984213daa813a9dee08 assets\sodium-world\models\item\penis_virus_block.json
+3f68bdca904475a64f3362dfe12689fc7991bacc assets\sodium-world\blockstates\chalk_block.json
 f8da4c0c31137de7af1c3e44f175f2324677cb78 assets\sodium-world\models\block\penis_block.json
 350399cc9e90579ed24455db57f5ad6cacef79b8 assets\sodium-world\models\block\penis_crop_stage5.json
-00b13527d71f1b75a151c84d1bf340ec038e547d assets\sodium-world\models\block\penis_holder_block.json
 b76ecc204578085e407715b2f14bbf6385f771fc assets\sodium-world\models\block\lemon_sapling.json
+00b13527d71f1b75a151c84d1bf340ec038e547d assets\sodium-world\models\block\penis_holder_block.json
 5f39bcb54dbc262f69dd1168c5129e1e93e6edeb assets\sodium-world\models\item\giant_carrot_seeds.json
 507134ffd142ed3133e55ee8c7f53624d6a19f26 assets\sodium-world\models\block\penis_crop_stage2.json
 7cd69df31dc39a7aa99800c5909e68c6356de0e7 assets\sodium-world\models\block\penis_virus_block.json
@@ -26,6 +28,7 @@ b76ecc204578085e407715b2f14bbf6385f771fc assets\sodium-world\models\block\lemon_
 0ae546098774b2c86566f816ce17d567b8d33c0d assets\sodium-world\models\item\penis_staff.json
 2b7fb802e98fee4b3d58064eee7b36cf157ca35b assets\sodium-world\blockstates\lemon_leaves.json
 e24f671f931a7219c993f24ab5ffe601fb3af950 assets\sodium-world\models\item\portal_fluid.json
+8208ea557710e1daa72ef1c7e1844f7b1926ca77 assets\sodium-world\models\block\chalk_block.json
 9d1486602fdf053fdc0866dca4a9203b4c19503d assets\sodium-world\models\item\portal_gun.json
 c7e78c58579cbf7b5b439b6fd30f71f23690ef6a assets\sodium-world\models\item\blyat.json
 1d11d69210d489279dfcada770c1524d6b2dde8f assets\sodium-world\models\block\penis_crop_stage0.json

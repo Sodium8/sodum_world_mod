@@ -21,6 +21,7 @@ import net.sodium.sodiumworld.networking.packet.SpawnPenisC2SPacket;
 import net.sodium.sodiumworld.networking.packet.SyncManaS2CPacket;
 import net.sodium.sodiumworld.sound.ModSounds;
 import net.sodium.sodiumworld.util.ModTreeDecoratorTypes;
+import net.sodium.sodiumworld.world.CustomModFeatures;
 import net.sodium.sodiumworld.world.gen.ModWorldGeneration;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -31,6 +32,7 @@ public class SodiumWorld implements ModInitializer {
 
 	@Override
 	public void onInitialize() {
+		CustomModFeatures.registerFeatures();
 		FireFrighting.register();
 		ModSounds.registerSounds();
 		PayloadTypeRegistry.playC2S().register(SpawnPenisC2SPacket.ID, SpawnPenisC2SPacket.CODEC);

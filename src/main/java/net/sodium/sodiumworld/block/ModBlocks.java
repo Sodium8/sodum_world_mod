@@ -48,6 +48,9 @@ public class ModBlocks {
             .noCollision()
             .nonOpaque()
             .pistonBehavior(PistonBehavior.DESTROY)));
+    public static final Block CHALK = registerBlock("chalk_block", new Block(AbstractBlock.Settings.create()
+            .strength(2f)
+            .requiresTool()));
     public static final Block LEMON_LEAVES = registerBlock("lemon_leaves",
             new LeavesBlock(AbstractBlock.Settings.copy(Blocks.OAK_LEAVES)));
     public static final Block LEMON_SAPLING = registerBlock("lemon_sapling",

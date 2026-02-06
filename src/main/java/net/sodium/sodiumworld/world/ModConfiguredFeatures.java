@@ -4,12 +4,11 @@ import net.minecraft.block.Blocks;
 import net.minecraft.registry.Registerable;
 import net.minecraft.registry.RegistryKey;
 import net.minecraft.registry.RegistryKeys;
+import net.minecraft.registry.tag.BlockTags;
+import net.minecraft.structure.rule.TagMatchRuleTest;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.math.intprovider.ConstantIntProvider;
-import net.minecraft.world.gen.feature.ConfiguredFeature;
-import net.minecraft.world.gen.feature.Feature;
-import net.minecraft.world.gen.feature.FeatureConfig;
-import net.minecraft.world.gen.feature.TreeFeatureConfig;
+import net.minecraft.world.gen.feature.*;
 import net.minecraft.world.gen.feature.size.TwoLayersFeatureSize;
 import net.minecraft.world.gen.foliage.BlobFoliagePlacer;
 import net.minecraft.world.gen.stateprovider.BlockStateProvider;
@@ -22,8 +21,8 @@ import java.util.List;
 
 public class ModConfiguredFeatures {
     public static final RegistryKey<ConfiguredFeature<?, ?>> LEMON_WOOD_KEY = registerKey("lemonwood");
+    public static final RegistryKey<ConfiguredFeature<?, ?>> CHALK_BEACH_KEY = registerKey("chalk_beach");
     public static void bootstrap(Registerable<ConfiguredFeature<?, ?>> context) {
-
         register(context, LEMON_WOOD_KEY, Feature.TREE, new TreeFeatureConfig.Builder(
                 BlockStateProvider.of(Blocks.OAK_LOG),
                 new StraightTrunkPlacer(5, 6, 3),
@@ -34,6 +33,8 @@ public class ModConfiguredFeatures {
                 new LemonFruitDecorator(0.12f)
         ))
                 .build());
+        context.register(CHALK_BEACH_KEY,
+                new ConfiguredFeature<>(CustomModFeatures.CHALK_BEACH_PATCH, DefaultFeatureConfig.DEFAULT));
     }
 
     public static RegistryKey<ConfiguredFeature<?, ?>> registerKey(String name) {
