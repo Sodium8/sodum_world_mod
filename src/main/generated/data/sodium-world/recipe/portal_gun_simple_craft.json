@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "I": {
+      "item": "minecraft:iron_ingot"
+    },
+    "W": {
+      "item": "sodium-world:portal_fluid"
+    }
+  },
+  "pattern": [
+    " W ",
+    "II ",
+    "  I"
+  ],
+  "result": {
+    "count": 1,
+    "id": "sodium-world:portal_gun"
+  }
+}

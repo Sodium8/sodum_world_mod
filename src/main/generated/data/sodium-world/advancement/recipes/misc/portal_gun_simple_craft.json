@@ -1,0 +1,43 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_iron_ingot": {
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraft:iron_ingot"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_portal_fluid": {
+      "conditions": {
+        "items": [
+          {
+            "items": "sodium-world:portal_fluid"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "sodium-world:portal_gun_simple_craft"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_iron_ingot",
+      "has_portal_fluid"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "sodium-world:portal_gun_simple_craft"
+    ]
+  }
+}

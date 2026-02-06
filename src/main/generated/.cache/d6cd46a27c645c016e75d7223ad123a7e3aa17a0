@@ -1,4 +1,4 @@
-// 1.21	2026-02-04T20:50:20.3173061	Sodium world/Recipes
+// 1.21	2026-02-06T13:34:33.8153878	Sodium world/Recipes
 3e1130383ab5172a0dd0094599c60658d8047561 data\sodium-world\recipe\ragout_of_penises.json
 0d1e5e98d73379b1b82065d05b54007b5a0f6def data\sodium-world\recipe\iron_dildo_simple_craft.json
 ed5b541a8054abf855175479301c1c0cc7e48510 data\sodium-world\advancement\recipes\misc\iron_dildo_simple_craft.json
@@ -13,3 +13,9 @@ e2a76c091e0acbdeec3681617254c61b951bc22c data\sodium-world\recipe\penis_staff_si
 a734d8eb18fb19be35d7e4b6977164b3f2fdc0a4 data\sodium-world\advancement\recipes\misc\penis_holder_simple_craft.json
 9aeb07bf03c369ab6d8877bd18d89ddf1785157d data\sodium-world\recipe\slut_from_smelting_penis.json
 c82268dc483b0fda496f25cedd2e56b61499827f data\sodium-world\advancement\recipes\misc\slut_from_smelting_penis.json
+b49245d56924d7c0379117642f8d7c6be9e0c219 data\sodium-world\advancement\recipes\misc\giant_carrrot_seed_simple_craft.json
+c28bef369f2fa5d2ce0c9a3f4442c063b3d61395 data\sodium-world\recipe\portal_gun_simple_craft.json
+cca1a73764d52e22c20a5deb63985530cc191b05 data\sodium-world\advancement\recipes\misc\portal_gun_simple_craft.json
+87e3dca981c8ff67fa349bee80a22563a40bed54 data\sodium-world\recipe\glass_simple_craft.json
+a81b2d5e8cae90a305224df979c8ea88c4b4124c data\sodium-world\recipe\giant_carrrot_seed_simple_craft.json
+a0c50c1dd7d34137a506720d9ee98a234eb58bc6 data\sodium-world\advancement\recipes\misc\glass_simple_craft.json

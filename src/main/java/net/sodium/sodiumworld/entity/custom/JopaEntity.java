@@ -6,7 +6,6 @@ import net.minecraft.entity.damage.DamageSource;
 import net.minecraft.entity.decoration.DisplayEntity;
 import net.minecraft.util.math.Vec3d;
 import net.minecraft.world.World;
-
 public class JopaEntity extends DisplayEntity {
     public JopaEntity(EntityType<?> entityType, World world) {
         super(entityType, world);
@@ -17,7 +16,6 @@ public class JopaEntity extends DisplayEntity {
     public float SCALEX = 0;
     public float SCALEZ = 0;
     private Vec3d root_pos = new Vec3d(0, 0, 0);
-    private Vec3d offset = new Vec3d(0, 0, 0);
     @Override
     public boolean isPushable() {
         return false;               // ← нельзя толкать
@@ -49,14 +47,12 @@ public class JopaEntity extends DisplayEntity {
 
     public void setRootPos(double x, double y, double z){
         this.root_pos = new Vec3d(x, y, z);
-        System.out.println("changed rootpos to "+ this.root_pos);
     }
 
     @Override
     public void tick() {
         float speed = 1f;
         float multiplier = 5f;
-        System.out.println("current pos: "+this.getPos());
         if (timer <= 0) {
             if (jopa_state == 0) {
                 jopa_state = 1;
@@ -85,8 +81,8 @@ public class JopaEntity extends DisplayEntity {
         double yawRadians = Math.toRadians(this.getYaw());
         double offsetX = -dist * Math.sin(yawRadians);
         double offsetZ = dist * Math.cos(yawRadians);
-        this.offset = new Vec3d(offsetX, 0, offsetZ);
-        this.setPosition(this.root_pos.add(this.offset));
+        Vec3d offset = new Vec3d(offsetX, 0, offsetZ);
+        this.setPosition(this.root_pos.add(offset));
         timer--;
         super.tick();
     }

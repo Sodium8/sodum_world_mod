@@ -1,9 +1,6 @@
 package net.sodium.sodiumworld.block;
 
-import net.minecraft.block.AbstractBlock;
-import net.minecraft.block.Block;
-import net.minecraft.block.ExperienceDroppingBlock;
-import net.minecraft.block.MapColor;
+import net.minecraft.block.*;
 import net.minecraft.block.piston.PistonBehavior;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
@@ -14,6 +11,7 @@ import net.minecraft.util.Identifier;
 import net.minecraft.util.math.intprovider.UniformIntProvider;
 import net.sodium.sodiumworld.SodiumWorld;
 import net.sodium.sodiumworld.block.custom.*;
+import net.sodium.sodiumworld.world.tree.ModSaplingGenerators;
 
 public class ModBlocks {
 
@@ -45,7 +43,15 @@ public class ModBlocks {
     public static final Block GLASS_BOTTLE_WITH_SUGAR = registerBlock("glass_bottle_with_sugar", new GlassBottleWithSugar(AbstractBlock.Settings.create().strength(0.1f).sounds(BlockSoundGroup.GLASS).nonOpaque()));
     public static final Block GLASS_BOTTLE_WITH_SUGAR_AND_SPARKLING_WATER = registerBlock("glass_bottle_with_sugar_and_sparkling_water", new GlassBottleWithSugarAndSparklingWater(AbstractBlock.Settings.create().strength(0.1f).sounds(BlockSoundGroup.GLASS).nonOpaque()));
     public static final Block GLASS_BOTTLE_WITH_LEMONADE = registerBlock("glass_bottle_with_lemonade", new GlassBottleWithLemonade(AbstractBlock.Settings.create().strength(0.1f).sounds(BlockSoundGroup.GLASS).nonOpaque()));
-
+    public static final Block LEMON_CROP = registerBlockWithoutItem("lemon_crop", new LemonCropBlock(AbstractBlock.Settings.create()
+            .breakInstantly()
+            .noCollision()
+            .nonOpaque()
+            .pistonBehavior(PistonBehavior.DESTROY)));
+    public static final Block LEMON_LEAVES = registerBlock("lemon_leaves",
+            new LeavesBlock(AbstractBlock.Settings.copy(Blocks.OAK_LEAVES)));
+    public static final Block LEMON_SAPLING = registerBlock("lemon_sapling",
+            new SaplingBlock(ModSaplingGenerators.LEMONWOOD, AbstractBlock.Settings.copy(Blocks.OAK_SAPLING)));
     private static Block registerBlock(String name, Block block){
         registerBlockItem(name, block);
         return Registry.register(Registries.BLOCK, Identifier.of(SodiumWorld.MOD_ID, name), block);

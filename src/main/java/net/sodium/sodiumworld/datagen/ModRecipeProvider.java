@@ -84,5 +84,29 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .input('W', Blocks.OAK_PLANKS)
                 .criterion(hasItem(Blocks.OAK_PLANKS), conditionsFromItem(Blocks.OAK_PLANKS))
                 .offerTo(recipeExporter, Identifier.of(SodiumWorld.MOD_ID, "dish_simple_craft"));
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.GIANT_CARROT_SEEDS)
+                .pattern("CCC")
+                .pattern("CCC")
+                .pattern("CCC")
+                .input('C', Items.CARROT)
+                .criterion(hasItem(Items.CARROT), conditionsFromItem(Items.CARROT))
+                .offerTo(recipeExporter, Identifier.of(SodiumWorld.MOD_ID, "giant_carrrot_seed_simple_craft"));
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.GLASS_BOTTLE)
+                .pattern("G G")
+                .pattern("G G")
+                .pattern(" G ")
+                .input('G', Items.GLASS)
+                .criterion(hasItem(Items.GLASS), conditionsFromItem(Items.GLASS))
+                .offerTo(recipeExporter, Identifier.of(SodiumWorld.MOD_ID, "glass_simple_craft"));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.PORTAL_GUN)
+                .pattern(" W ")
+                .pattern("II ")
+                .pattern("  I")
+                .input('I', Items.IRON_INGOT)
+                .criterion(hasItem(Items.IRON_INGOT), conditionsFromItem(Items.IRON_INGOT))
+                .input('W', ModItems.PORTAL_FLUID)
+                .criterion(hasItem(ModItems.PORTAL_FLUID), conditionsFromItem(ModItems.PORTAL_FLUID))
+                .offerTo(recipeExporter, Identifier.of(SodiumWorld.MOD_ID, "portal_gun_simple_craft"));
     }
 }

@@ -23,7 +23,7 @@ public class ModItems {
     public static final Item GIANT_CARROT = registerItem("giant_carrot", new GiantCarrot(new Item.Settings()));
     public static final Item BLYAT = registerItem("blyat", new BlyatItem(new Item.Settings()));
     public static final Item PORTAL_GUN = registerItem("portal_gun", new PortalGun(new Item.Settings()));
-
+    public static final Item PORTAL_FLUID = registerItem("portal_fluid", new PortalGun(new Item.Settings()));
     public static final Item RAGOUT_OF_PENISES = registerItem("ragout_of_penises", new Item(new Item.Settings().food(ModFoodComponents.RAGOUT_OF_PENISES)));
     public static final Item PENIS_SEEDS = registerItem("penis_seeds",
             new AliasedBlockItem(ModBlocks.PENIS_CROP, new Item.Settings()));

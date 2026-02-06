@@ -35,7 +35,6 @@ public class JopaRenderer extends EntityRenderer<JopaEntity> {
             int light
     ) {
         matrices.push();
-        System.out.println(entity.SCALEZ);
         matrices.translate(0.0, 1.09375, 0.0);
 
         matrices.multiply(RotationAxis.POSITIVE_Y.rotationDegrees(-entityYaw));
@@ -43,7 +42,7 @@ public class JopaRenderer extends EntityRenderer<JopaEntity> {
         model.setAngles(entity, 0.0F, 0.0F, entity.age + tickDelta, entityYaw, entity.getPitch());
 
         VertexConsumer buffer = vertexConsumers.getBuffer(model.getLayer(getTexture(entity)));
-        matrices.scale(entity.SCALEX, 1, entity.SCALEZ);
+        matrices.scale(entity.SCALEX, -1, entity.SCALEZ);
 
         model.render(matrices, buffer, light, OverlayTexture.DEFAULT_UV, 0xFFFFFFFF);
 

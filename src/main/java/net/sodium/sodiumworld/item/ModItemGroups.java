@@ -25,11 +25,14 @@ public class ModItemGroups {
                         entries.add(ModItems.GIANT_CARROT_SEEDS);
                         entries.add(ModItems.GIANT_CARROT);
                         entries.add(ModItems.PORTAL_GUN);
+                        entries.add(ModItems.PORTAL_FLUID);
                         entries.add(ModItems.RAGOUT_OF_PENISES);
                         entries.add(ModBlocks.PENIS_BLOCK);
                         entries.add(ModBlocks.PENIS_HOLDER_BLOCK);
                         entries.add(ModBlocks.BROKEN_PENIS_BLOCK);
                         entries.add(ModBlocks.IRON_DILDO);
+                        entries.add(ModBlocks.LEMON_SAPLING);
+                        entries.add(ModBlocks.LEMON_LEAVES);
                         entries.add(ModBlocks.PENIS_VIRUS_BLOCK);
                         entries.add(ModBlocks.DISH);
                         entries.add(ModBlocks.GLASS_BOTTLE);

@@ -12,7 +12,6 @@ import net.sodium.sodiumworld.component.ModDataComponentTypes;
 import net.sodium.sodiumworld.entity.ModEntities;
 import net.sodium.sodiumworld.entity.custom.CarrotCarEntity;
 import net.sodium.sodiumworld.entity.custom.HitlerEntity;
-import net.sodium.sodiumworld.entity.custom.PortalEntity;
 import net.sodium.sodiumworld.event.PlayerTickHandler;
 import net.sodium.sodiumworld.item.ModItemGroups;
 import net.sodium.sodiumworld.item.ModItems;
@@ -21,6 +20,7 @@ import net.sodium.sodiumworld.networking.packet.ChangeJopaRootPosS2CPacket;
 import net.sodium.sodiumworld.networking.packet.SpawnPenisC2SPacket;
 import net.sodium.sodiumworld.networking.packet.SyncManaS2CPacket;
 import net.sodium.sodiumworld.sound.ModSounds;
+import net.sodium.sodiumworld.util.ModTreeDecoratorTypes;
 import net.sodium.sodiumworld.world.gen.ModWorldGeneration;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -46,6 +46,7 @@ public class SodiumWorld implements ModInitializer {
 		CompostingChanceRegistry.INSTANCE.add(ModItems.PENIS_SEEDS, 0.2f);
 		ModWorldGeneration.generateModWorldGen();
 		ServerTickEvents.START_SERVER_TICK.register(new PlayerTickHandler());
+		ModTreeDecoratorTypes.register();
 		FabricDefaultAttributeRegistry.register(ModEntities.CARROT_CAR, CarrotCarEntity.createAttributes());
 		FabricDefaultAttributeRegistry.register(ModEntities.HITLER, HitlerEntity.createAttributes());
 	}

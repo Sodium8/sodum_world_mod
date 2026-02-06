@@ -28,6 +28,8 @@ public class SodiumWorldClient implements ClientModInitializer {
     @Override
     public void onInitializeClient() {
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.PENIS_CROP, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.LEMON_CROP, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.LEMON_SAPLING, RenderLayer.getCutout());
         EntityRendererRegistry.register(ModEntities.DILDO, DildoRenderer::new);
         BlockEntityRendererFactories.register(ModBlockEntities.PEDESTAL_BE, DishBlockEntityRenderer::new);
         KeyInputHandler.register();

@@ -25,6 +25,8 @@ public class ModModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerCrop(ModBlocks.PENIS_CROP, PenisCropBlock.AGE, 0, 1, 2, 3, 4, 5);
         blockStateModelGenerator.registerNorthDefaultHorizontalRotation(ModBlocks.IRON_DILDO);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.PENIS_VIRUS_BLOCK);
+        blockStateModelGenerator.registerSingleton(ModBlocks.LEMON_LEAVES, TexturedModel.LEAVES);
+        blockStateModelGenerator.registerTintableCrossBlockState(ModBlocks.LEMON_SAPLING, BlockStateModelGenerator.TintType.NOT_TINTED);
     }
 
     @Override
@@ -35,6 +37,7 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.BLYAT, Models.GENERATED);
         itemModelGenerator.register(ModItems.SPARKLING_WATER, Models.GENERATED);
         itemModelGenerator.register(ModItems.PORTAL_GUN, Models.GENERATED);
+        itemModelGenerator.register(ModItems.PORTAL_FLUID, Models.GENERATED);
         itemModelGenerator.register(ModItems.LEMON, Models.GENERATED);
         itemModelGenerator.register(ModItems.RAGOUT_OF_PENISES, Models.GENERATED);
         itemModelGenerator.register(ModItems.PENIS_STAFF, Models.GENERATED);
