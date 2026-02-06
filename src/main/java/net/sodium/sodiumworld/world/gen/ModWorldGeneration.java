@@ -4,5 +4,6 @@ public class ModWorldGeneration {
     public static void generateModWorldGen() {
         ModTreeGeneration.generateTrees();
         ModBeachGeneration.addChalkToBeaches();
+        ModMountainsGeneration.addSulfurToMountains();
     }
 }

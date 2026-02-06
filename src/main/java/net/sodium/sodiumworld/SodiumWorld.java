@@ -19,6 +19,7 @@ import net.sodium.sodiumworld.networking.ModMessages;
 import net.sodium.sodiumworld.networking.packet.ChangeJopaRootPosS2CPacket;
 import net.sodium.sodiumworld.networking.packet.SpawnPenisC2SPacket;
 import net.sodium.sodiumworld.networking.packet.SyncManaS2CPacket;
+import net.sodium.sodiumworld.screen.ModScreenHandlers;
 import net.sodium.sodiumworld.sound.ModSounds;
 import net.sodium.sodiumworld.util.ModTreeDecoratorTypes;
 import net.sodium.sodiumworld.world.CustomModFeatures;
@@ -41,6 +42,7 @@ public class SodiumWorld implements ModInitializer {
 		ModMessages.registerC2SPackets();
 		ModItemGroups.registerItemGroups();
 		ModBlockEntities.registerBlockEntities();
+		ModScreenHandlers.registerScreenHandlers();
 		ModBlocks.registerModBlocks();
 		ModItems.registerModItems();
 		ModEntities.registerModEntities();

@@ -18,6 +18,7 @@ public class ModModelProvider extends FabricModelProvider {
     public void generateBlockStateModels(BlockStateModelGenerator blockStateModelGenerator) {
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.PENIS_BLOCK);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.CHALK);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.SULFUR);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.BROKEN_PENIS_BLOCK);
         Identifier holderEmptyIdentifier = TexturedModel.CUBE_ALL.upload(ModBlocks.PENIS_HOLDER_BLOCK, blockStateModelGenerator.modelCollector);
         Identifier holderFullIdentifier = blockStateModelGenerator.createSubModel(ModBlocks.PENIS_HOLDER_BLOCK, "_full", Models.CUBE_ALL, TextureMap::all);

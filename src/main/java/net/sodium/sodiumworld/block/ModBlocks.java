@@ -51,10 +51,14 @@ public class ModBlocks {
     public static final Block CHALK = registerBlock("chalk_block", new Block(AbstractBlock.Settings.create()
             .strength(2f)
             .requiresTool()));
+    public static final Block SULFUR = registerBlock("sulfur", new Block(AbstractBlock.Settings.create()
+            .strength(2f)
+            .requiresTool()));
     public static final Block LEMON_LEAVES = registerBlock("lemon_leaves",
             new LeavesBlock(AbstractBlock.Settings.copy(Blocks.OAK_LEAVES)));
     public static final Block LEMON_SAPLING = registerBlock("lemon_sapling",
             new SaplingBlock(ModSaplingGenerators.LEMONWOOD, AbstractBlock.Settings.copy(Blocks.OAK_SAPLING)));
+    public static final Block BURNER_BLOCK = registerBlock("burner_block", new BurnerBlock(AbstractBlock.Settings.create()));
     private static Block registerBlock(String name, Block block){
         registerBlockItem(name, block);
         return Registry.register(Registries.BLOCK, Identifier.of(SodiumWorld.MOD_ID, name), block);

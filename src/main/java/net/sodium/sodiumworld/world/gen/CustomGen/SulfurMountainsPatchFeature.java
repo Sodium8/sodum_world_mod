@@ -1,4 +1,4 @@
-package net.sodium.sodiumworld.world.gen;
+package net.sodium.sodiumworld.world.gen.CustomGen;
 
 import com.mojang.serialization.Codec;
 import net.minecraft.block.Blocks;
@@ -10,9 +10,9 @@ import net.minecraft.world.gen.feature.Feature;
 import net.minecraft.world.gen.feature.util.FeatureContext;
 import net.sodium.sodiumworld.block.ModBlocks;
 
-public class ChalkBeachPatchFeature extends Feature<DefaultFeatureConfig> {
+public class SulfurMountainsPatchFeature extends Feature<DefaultFeatureConfig> {
 
-    public ChalkBeachPatchFeature(Codec<DefaultFeatureConfig> codec) {
+    public SulfurMountainsPatchFeature(Codec<DefaultFeatureConfig> codec) {
         super(codec);
     }
 
@@ -37,14 +37,14 @@ public class ChalkBeachPatchFeature extends Feature<DefaultFeatureConfig> {
 
                     if (world.isAir(above) && !world.isAir(pos)) {
 
-                        if (world.getBlockState(pos).isOf(Blocks.SAND)) {
+                        if (world.getBlockState(pos).isOf(Blocks.STONE)) {
                             if (rand.nextInt(100) < replaceChance) {
-                                world.setBlockState(pos, ModBlocks.CHALK.getDefaultState(), 3);  // 3 = флаг Block.UPDATE_CLIENTS
+                                world.setBlockState(pos, ModBlocks.SULFUR.getDefaultState(), 3);
 
                                 if (rand.nextInt(100) < 40) {
                                     BlockPos below = pos.down();
-                                    if (world.getBlockState(below).isOf(Blocks.SAND)) {
-                                        world.setBlockState(below, ModBlocks.CHALK.getDefaultState(), 3);
+                                    if (world.getBlockState(below).isOf(Blocks.STONE)) {
+                                        world.setBlockState(below, ModBlocks.SULFUR.getDefaultState(), 3);
                                     }
                                 }
                             }

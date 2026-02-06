@@ -5,6 +5,7 @@ import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
 import net.fabricmc.fabric.api.client.rendering.v1.EntityModelLayerRegistry;
 import net.fabricmc.fabric.api.client.rendering.v1.EntityRendererRegistry;
 import net.fabricmc.fabric.api.client.rendering.v1.HudRenderCallback;
+import net.minecraft.client.gui.screen.ingame.HandledScreens;
 import net.minecraft.client.render.RenderLayer;
 import net.minecraft.client.render.block.entity.BlockEntityRendererFactories;
 import net.sodium.sodiumworld.block.ModBlocks;
@@ -23,6 +24,8 @@ import net.sodium.sodiumworld.entity.client.jopa.JopaModel;
 import net.sodium.sodiumworld.entity.client.jopa.JopaRenderer;
 import net.sodium.sodiumworld.event.KeyInputHandler;
 import net.sodium.sodiumworld.networking.ModMessages;
+import net.sodium.sodiumworld.screen.ModScreenHandlers;
+import net.sodium.sodiumworld.screen.custom.BurnerScreen;
 
 public class SodiumWorldClient implements ClientModInitializer {
     @Override
@@ -43,5 +46,6 @@ public class SodiumWorldClient implements ClientModInitializer {
         EntityRendererRegistry.register(ModEntities.PORTAL, PortalRenderer::new);
         EntityModelLayerRegistry.registerModelLayer(JopaModel.JOPA, JopaModel::getTexturedModelData);
         EntityRendererRegistry.register(ModEntities.JOPA, JopaRenderer::new);
+        HandledScreens.register(ModScreenHandlers.BURNER_SCREEN_HANDLER, BurnerScreen::new);
     }
 }

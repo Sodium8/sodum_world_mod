@@ -22,6 +22,7 @@ import java.util.List;
 public class ModConfiguredFeatures {
     public static final RegistryKey<ConfiguredFeature<?, ?>> LEMON_WOOD_KEY = registerKey("lemonwood");
     public static final RegistryKey<ConfiguredFeature<?, ?>> CHALK_BEACH_KEY = registerKey("chalk_beach");
+    public static final RegistryKey<ConfiguredFeature<?, ?>> SULFUR_MOUNTAINS_KEY = registerKey("sulfur_mountains");
     public static void bootstrap(Registerable<ConfiguredFeature<?, ?>> context) {
         register(context, LEMON_WOOD_KEY, Feature.TREE, new TreeFeatureConfig.Builder(
                 BlockStateProvider.of(Blocks.OAK_LOG),
@@ -35,6 +36,8 @@ public class ModConfiguredFeatures {
                 .build());
         context.register(CHALK_BEACH_KEY,
                 new ConfiguredFeature<>(CustomModFeatures.CHALK_BEACH_PATCH, DefaultFeatureConfig.DEFAULT));
+        context.register(SULFUR_MOUNTAINS_KEY,
+                new ConfiguredFeature<>(CustomModFeatures.SULFUR_MOUNTAINS_PATCH, DefaultFeatureConfig.DEFAULT));
     }
 
     public static RegistryKey<ConfiguredFeature<?, ?>> registerKey(String name) {

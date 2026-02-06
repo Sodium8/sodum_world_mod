@@ -17,6 +17,8 @@ public class ModPlacedFeatures {
     public static final RegistryKey<PlacedFeature> LEMONWOOD_PLACED_KEY = registerKey("lemonwood_placed");
     public static final RegistryKey<PlacedFeature> CHALK_BEACH_PATCH_PLACED =
             registerKey("chalk_beach_patch_placed");
+    public static final RegistryKey<PlacedFeature> SULFUR_MOUNTAINS_PATCH_PLACED =
+            registerKey("sulfur_mountains_patch_placed");
     public static void bootstrap(Registerable<PlacedFeature> context) {
         var configuredFeatures = context.getRegistryLookup(RegistryKeys.CONFIGURED_FEATURE);
         register(context, LEMONWOOD_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.LEMON_WOOD_KEY),
@@ -27,6 +29,18 @@ public class ModPlacedFeatures {
                 .getOrThrow(ModConfiguredFeatures.CHALK_BEACH_KEY);
 
         register(context, CHALK_BEACH_PATCH_PLACED, entry,
+                List.of(
+                        CountPlacementModifier.of(1),
+                        RarityFilterPlacementModifier.of(4),
+                        SquarePlacementModifier.of(),
+                        PlacedFeatures.MOTION_BLOCKING_HEIGHTMAP,
+                        BiomePlacementModifier.of()
+                ));
+
+        var entry1 = context.getRegistryLookup(RegistryKeys.CONFIGURED_FEATURE)
+                .getOrThrow(ModConfiguredFeatures.SULFUR_MOUNTAINS_KEY);
+
+        register(context, SULFUR_MOUNTAINS_PATCH_PLACED, entry1,
                 List.of(
                         CountPlacementModifier.of(1),
                         RarityFilterPlacementModifier.of(8),

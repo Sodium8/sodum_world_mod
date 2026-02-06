@@ -1,5 +1,7 @@
-// 1.21	2026-02-06T19:47:30.6767045	Sodium world/
+// 1.21	2026-02-06T21:14:09.2373485	Sodium world/
 5406db1fb6b28e0683e8e2958d1752cd89ae3d44 data\sodium-world\worldgen\placed_feature\chalk_beach_patch_placed.json
 6d5c2c22e5a7d3332896c4f72a43969016c20b37 data\sodium-world\worldgen\configured_feature\lemonwood.json
 d2ac1fd01243bedd27be8e7d7d58131b61e208b7 data\sodium-world\worldgen\placed_feature\lemonwood_placed.json
 dbbad01e59296a85e9ac125d6d3d5cf41c8df3d3 data\sodium-world\worldgen\configured_feature\chalk_beach.json
+df6d74f5386fd3862b5570fc23e141bcac257851 data\sodium-world\worldgen\placed_feature\sulfur_mountains_patch_placed.json
+3b9c3626dad37cf8d782a0fb8b0d0b703dc0c804 data\sodium-world\worldgen\configured_feature\sulfur_mountains.json
