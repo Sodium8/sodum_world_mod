@@ -49,6 +49,12 @@ public class ModBlockEntities {
                     Identifier.of(SodiumWorld.MOD_ID, "gas_pipe_block_entity"),
                     BlockEntityType.Builder.create(GasPipeEntity::new, ModBlocks.GAS_PIPE).build(null)
             );
+    public static BlockEntityType<GasPumpEntity> GAS_PUMP_ENTITY =
+            Registry.register(
+                    Registries.BLOCK_ENTITY_TYPE,
+                    Identifier.of(SodiumWorld.MOD_ID, "gas_pump_block_entity"),
+                    BlockEntityType.Builder.create(GasPumpEntity::new, ModBlocks.GAS_PUMP).build(null)
+            );
 
     public static void registerBlockEntities() {
         SodiumWorld.LOGGER.info("Registering Block Entities for " + SodiumWorld.MOD_ID);

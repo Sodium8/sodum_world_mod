@@ -52,4 +52,14 @@ public interface ImplementedGasInventory {
         return 0;
     }
 
+    default float leftFreePlace(){
+        ArrayList<GasStack> inv = getGasInventory();
+
+        float sum = 0;
+        for (GasStack stack : inv) {
+            sum += stack.getVolume();
+        }
+        return (getMaxSize() - sum);
+    }
+
 }

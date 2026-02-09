@@ -44,6 +44,8 @@ public class ModItemGroups {
                         entries.add(ModBlocks.GAS_CONTAINER);
                         entries.add(ModBlocks.BURNER_BLOCK);
                         entries.add(ModBlocks.ELECTROLIZER_BLOCK);
+                        entries.add(ModBlocks.GAS_PIPE);
+                        entries.add(ModBlocks.GAS_PUMP);
                     }).build());
     public static void registerItemGroups() {
         SodiumWorld.LOGGER.info("Registering Item Groups for" + SodiumWorld.MOD_ID);

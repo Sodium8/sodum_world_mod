@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "P": {
+      "item": "sodium-world:gas_pipe"
+    }
+  },
+  "pattern": [
+    "P"
+  ],
+  "result": {
+    "count": 1,
+    "id": "sodium-world:gas_pump"
+  }
+}

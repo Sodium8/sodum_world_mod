@@ -15,17 +15,16 @@ import net.sodium.sodiumworld.block.entity.ModBlockEntities;
 import net.sodium.sodiumworld.block.entity.custom.NBTUtils.GasContainerNBTUtil;
 import net.sodium.sodiumworld.networking.packet.SyncGasS2CPacket;
 import net.sodium.sodiumworld.util.GasStack;
-import org.jetbrains.annotations.Nullable;
 import org.joml.Vector3f;
 
 import java.util.ArrayList;
 
-public class GasPipeEntity  extends BlockEntity implements ImplementedGasInventory {
+public class GasPipeEntity extends BlockEntity implements ImplementedGasInventory {
     public GasPipeEntity(BlockPos pos, BlockState state) {
         super(ModBlockEntities.GAS_PIPE_ENTITY, pos, state);
     }
 
-    private final ArrayList<GasStack> gasInventory = new ArrayList<>();
+    private ArrayList<GasStack> gasInventory = new ArrayList<>();
     private float maxSize = 10;
     private BlockPos offset = new BlockPos(0, 0, 0);
 
@@ -33,13 +32,22 @@ public class GasPipeEntity  extends BlockEntity implements ImplementedGasInvento
     public ArrayList<GasStack> getGasInventory() {
         return gasInventory;
     }
-
+    public void setGasInventory(ArrayList<GasStack> new_inv) {
+        this.gasInventory = new_inv;
+    }
     @Override
     public float getMaxSize() {
         return maxSize;
     }
 
     public static void tick(World world, BlockPos pos, BlockState state, GasPipeEntity blockEntity) {
+        ArrayList<GasStack> new_inv = new ArrayList<GasStack>();
+        for (GasStack i : blockEntity.getGasInventory()){
+            if(i.getVolume() > 0){
+                new_inv.add(i);
+            }
+        }
+        blockEntity.setGasInventory(new_inv);
         blockEntity.offset =
                 switch (state.get(GasPipeBlock.PIPE_ORIENTATION)){
                     case 0 -> new BlockPos(1, 0, 0);

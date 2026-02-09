@@ -44,6 +44,7 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.GAS_CONTAINER);
         addDrop(ModBlocks.ELECTROLIZER_BLOCK);
         addDrop(ModBlocks.GAS_PIPE);
+        addDrop(ModBlocks.GAS_PUMP);
         addDrop(ModBlocks.DISH);
         addDrop(ModBlocks.LEMON_SAPLING);
         addDrop(ModBlocks.LEMON_LEAVES, leavesDrops(ModBlocks.LEMON_LEAVES, ModBlocks.LEMON_SAPLING, 0.06f));

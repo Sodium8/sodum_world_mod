@@ -1,0 +1,22 @@
+{
+  "variants": {
+    "pipe_orientation=0": {
+      "model": "sodium-world:block/pump0"
+    },
+    "pipe_orientation=1": {
+      "model": "sodium-world:block/pump1"
+    },
+    "pipe_orientation=2": {
+      "model": "sodium-world:block/pump2"
+    },
+    "pipe_orientation=3": {
+      "model": "sodium-world:block/pump3"
+    },
+    "pipe_orientation=4": {
+      "model": "sodium-world:block/pump4"
+    },
+    "pipe_orientation=5": {
+      "model": "sodium-world:block/pump5"
+    }
+  }
+}

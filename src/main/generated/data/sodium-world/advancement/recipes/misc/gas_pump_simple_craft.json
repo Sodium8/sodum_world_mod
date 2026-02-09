@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_gas_pipe": {
+      "conditions": {
+        "items": [
+          {
+            "items": "sodium-world:gas_pipe"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "sodium-world:gas_pump_simple_craft"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_gas_pipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "sodium-world:gas_pump_simple_craft"
+    ]
+  }
+}

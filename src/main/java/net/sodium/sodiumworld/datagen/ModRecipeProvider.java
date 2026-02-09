@@ -133,5 +133,17 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .input('R', Blocks.REDSTONE_WIRE)
                 .criterion(hasItem(Blocks.REDSTONE_WIRE), conditionsFromItem(Blocks.REDSTONE_WIRE))
                 .offerTo(recipeExporter, Identifier.of(SodiumWorld.MOD_ID, "electrolizer_simple_craft"));
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.GAS_PIPE, 16)
+                .pattern("GGG")
+                .pattern("   ")
+                .pattern("GGG")
+                .input('G', Items.GLASS)
+                .criterion(hasItem(Items.GLASS), conditionsFromItem(Items.GLASS))
+                .offerTo(recipeExporter, Identifier.of(SodiumWorld.MOD_ID, "gas_pipe_simple_craft"));
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.GAS_PUMP, 1)
+                .pattern("P")
+                .input('P', ModBlocks.GAS_PIPE)
+                .criterion(hasItem(ModBlocks.GAS_PIPE), conditionsFromItem(ModBlocks.GAS_PIPE))
+                .offerTo(recipeExporter, Identifier.of(SodiumWorld.MOD_ID, "gas_pump_simple_craft"));
     }
 }

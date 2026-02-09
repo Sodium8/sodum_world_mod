@@ -29,6 +29,8 @@
   "block.sodium-world.burner_block": "Burner",
   "block.sodium-world.gas_container_block": "Gas container",
   "block.sodium-world.electrolizer_block": "Electrolizer container",
+  "block.sodium-world.gas_pipe_block": "Gas pipe",
+  "block.sodium-world.gas_pump_block": "Gas pump",
 
   "itemgroup.sodium-world.sodium_items": "Pizdozhopnie items",
 

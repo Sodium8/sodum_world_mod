@@ -17,13 +17,14 @@ import net.sodium.sodiumworld.util.GasStack;
 import org.joml.Vector3f;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class GasContainerEntity extends BlockEntity implements ImplementedGasInventory {
 
     public GasContainerEntity(BlockPos pos, BlockState state) {
         super(ModBlockEntities.GAS_CONTAINER_ENTITY, pos, state);
     }
-    private final ArrayList<GasStack> gasInventory = new ArrayList<>();  // ← индивидуальный инвентарь
+    private ArrayList<GasStack> gasInventory = new ArrayList<>();  // ← индивидуальный инвентарь
     private float maxSize = 1000;
 
     @Override
@@ -31,12 +32,22 @@ public class GasContainerEntity extends BlockEntity implements ImplementedGasInv
         return gasInventory;
     }
 
+    public void setGasInventory(ArrayList<GasStack> new_inv) {
+        this.gasInventory = new_inv;
+    }
+
     @Override
     public float getMaxSize() {
         return maxSize;
     }
     public static void tick(World world, BlockPos pos, BlockState state, GasContainerEntity blockEntity) {
-
+        ArrayList<GasStack> new_inv = new ArrayList<GasStack>();
+        for (GasStack i : blockEntity.getGasInventory()){
+            if(i.getVolume() > 0){
+                new_inv.add(i);
+            }
+        }
+        blockEntity.setGasInventory(new_inv);
     }
     @Override
     protected void writeNbt(NbtCompound nbt, RegistryWrapper.WrapperLookup registryLookup) {
