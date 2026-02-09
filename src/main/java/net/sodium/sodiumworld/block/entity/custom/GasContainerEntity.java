@@ -13,6 +13,7 @@ import net.sodium.sodiumworld.block.entity.ImplementedGasInventory;
 import net.sodium.sodiumworld.block.entity.ModBlockEntities;
 import net.sodium.sodiumworld.block.entity.custom.NBTUtils.GasContainerNBTUtil;
 import net.sodium.sodiumworld.networking.packet.SyncGasS2CPacket;
+import net.sodium.sodiumworld.util.GasRecipe;
 import net.sodium.sodiumworld.util.GasStack;
 import org.joml.Vector3f;
 
@@ -23,9 +24,16 @@ public class GasContainerEntity extends BlockEntity implements ImplementedGasInv
 
     public GasContainerEntity(BlockPos pos, BlockState state) {
         super(ModBlockEntities.GAS_CONTAINER_ENTITY, pos, state);
+        List<GasStack> input = new ArrayList<>();
+        input.add(new GasStack("sulfuric_dioxide", 2));
+        input.add(new GasStack("oxygen", 1));
+        List<GasStack> output = new ArrayList<>();
+        output.add(new GasStack("sulfuric_trioxide", 2));
+        this.gasRecipes.add(new GasRecipe(this, input, output));
     }
     private ArrayList<GasStack> gasInventory = new ArrayList<>();  // ← индивидуальный инвентарь
     private float maxSize = 1000;
+    public ArrayList<GasRecipe> gasRecipes = new ArrayList<>();
 
     @Override
     public ArrayList<GasStack> getGasInventory() {
@@ -48,6 +56,12 @@ public class GasContainerEntity extends BlockEntity implements ImplementedGasInv
             }
         }
         blockEntity.setGasInventory(new_inv);
+        blockEntity.craft();
+    }
+    private void craft(){
+        for(GasRecipe i:this.gasRecipes){
+            i.try_to_craft();
+        }
     }
     @Override
     protected void writeNbt(NbtCompound nbt, RegistryWrapper.WrapperLookup registryLookup) {

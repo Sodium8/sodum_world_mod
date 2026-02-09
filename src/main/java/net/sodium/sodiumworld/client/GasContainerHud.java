@@ -55,7 +55,7 @@ public class GasContainerHud {
                     client.textRenderer,
                     gases.get(i).getId() + ": " + gases.get(i).getVolume(),
                     x + 6,
-                    y + 14+i*20,
+                    y + 14+i*8,
                     0xAAAAAA,
                     false
             );
