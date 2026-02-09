@@ -1,9 +1,12 @@
 package net.sodium.sodiumworld.block.entity.rederer;
 
+import net.minecraft.block.Blocks;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.render.LightmapTextureManager;
 import net.minecraft.client.render.OverlayTexture;
+import net.minecraft.client.render.RenderLayer;
 import net.minecraft.client.render.VertexConsumerProvider;
+import net.minecraft.client.render.block.BlockModelRenderer;
 import net.minecraft.client.render.block.entity.BlockEntityRenderer;
 import net.minecraft.client.render.block.entity.BlockEntityRendererFactory;
 import net.minecraft.client.render.item.ItemRenderer;
@@ -25,11 +28,11 @@ public class DishBlockEntityRenderer implements BlockEntityRenderer<DishBlockEnt
         ItemRenderer itemRenderer = MinecraftClient.getInstance().getItemRenderer();
         ItemStack stack = entity.getStack(0);
 
+
         matrices.push();
         matrices.translate(0.5f, 0.1f, 0.5f);
         matrices.scale(0.5f, 0.5f, 0.5f);
         matrices.multiply(RotationAxis.POSITIVE_X.rotationDegrees(90));
-
         itemRenderer.renderItem(stack, ModelTransformationMode.GUI, getLightLevel(entity.getWorld(),
                 entity.getPos()), OverlayTexture.DEFAULT_UV, matrices, vertexConsumers, entity.getWorld(), 1);
         matrices.pop();

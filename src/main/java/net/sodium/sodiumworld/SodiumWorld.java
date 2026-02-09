@@ -18,6 +18,7 @@ import net.sodium.sodiumworld.item.ModItems;
 import net.sodium.sodiumworld.networking.ModMessages;
 import net.sodium.sodiumworld.networking.packet.ChangeJopaRootPosS2CPacket;
 import net.sodium.sodiumworld.networking.packet.SpawnPenisC2SPacket;
+import net.sodium.sodiumworld.networking.packet.SyncGasS2CPacket;
 import net.sodium.sodiumworld.networking.packet.SyncManaS2CPacket;
 import net.sodium.sodiumworld.screen.ModScreenHandlers;
 import net.sodium.sodiumworld.sound.ModSounds;
@@ -39,6 +40,7 @@ public class SodiumWorld implements ModInitializer {
 		PayloadTypeRegistry.playC2S().register(SpawnPenisC2SPacket.ID, SpawnPenisC2SPacket.CODEC);
 		PayloadTypeRegistry.playS2C().register(SyncManaS2CPacket.ID, SyncManaS2CPacket.CODEC);
 		PayloadTypeRegistry.playS2C().register(ChangeJopaRootPosS2CPacket.ID, ChangeJopaRootPosS2CPacket.CODEC);
+		PayloadTypeRegistry.playS2C().register(SyncGasS2CPacket.ID, SyncGasS2CPacket.CODEC);
 		ModMessages.registerC2SPackets();
 		ModItemGroups.registerItemGroups();
 		ModBlockEntities.registerBlockEntities();

@@ -1,8 +1,6 @@
 package net.sodium.sodiumworld.block.custom;
 
-import net.minecraft.block.Block;
-import net.minecraft.block.BlockEntityProvider;
-import net.minecraft.block.BlockState;
+import net.minecraft.block.*;
 import net.minecraft.block.entity.BlockEntity;
 import net.minecraft.block.entity.BlockEntityTicker;
 import net.minecraft.block.entity.BlockEntityType;
@@ -12,16 +10,27 @@ import net.minecraft.util.ActionResult;
 import net.minecraft.util.ItemScatterer;
 import net.minecraft.util.hit.BlockHitResult;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.shape.VoxelShape;
+import net.minecraft.util.shape.VoxelShapes;
+import net.minecraft.world.BlockView;
 import net.minecraft.world.World;
 import net.sodium.sodiumworld.block.entity.ModBlockEntities;
 import net.sodium.sodiumworld.block.entity.custom.BurnerBlockEntity;
 import org.jetbrains.annotations.Nullable;
 
 public class BurnerBlock extends Block implements BlockEntityProvider {
+    public static final VoxelShape SHAPE = VoxelShapes.union(
+            Block.createCuboidShape(4.5, 0.0, 4.5, 11.5, 16.0, 11.5),
+            Block.createCuboidShape(3.5, 0.0, 3.5, 12.5, 1.5, 12.5));
+
     public BurnerBlock(Settings settings) {
         super(settings);
     }
 
+    @Override
+    protected VoxelShape getOutlineShape(BlockState state, BlockView world, BlockPos pos, ShapeContext context) {
+        return SHAPE;
+    }
     @Override
     public @Nullable BlockEntity createBlockEntity(BlockPos pos, BlockState state) {
         return new BurnerBlockEntity(pos, state);
@@ -55,7 +64,7 @@ public class BurnerBlock extends Block implements BlockEntityProvider {
     protected ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player, BlockHitResult hit) {
         if (world.isClient()) {return ActionResult.PASS;}
         player.openHandledScreen((NamedScreenHandlerFactory) world.getBlockEntity(pos));
-        return super.onUse(state, world, pos, player, hit);
+        return ActionResult.SUCCESS;
     }
 
 }

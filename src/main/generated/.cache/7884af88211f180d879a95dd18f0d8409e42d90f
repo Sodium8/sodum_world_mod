@@ -1,4 +1,5 @@
-// 1.21	2026-02-06T21:14:09.2393476	Sodium world/Tags for minecraft:block
+// 1.21	2026-02-09T12:55:06.1653209	Sodium world/Tags for minecraft:block
+878c1a19fe74ee6d6d45aa0dbb75dc4ab1529e6b data\sodium-world\tags\block\contain_gas.json
 64c7a67d3bf0d7be072fed243b0da3b8241788ac data\minecraft\tags\block\needs_iron_tool.json
-6fb3be6656c7d1836e536370d4321ca8faf97059 data\minecraft\tags\block\mineable\pickaxe.json
-ef0e7ca4c1500a6d2c6f0cd4643713df111f76c5 data\minecraft\tags\block\needs_stone_tool.json
+f3c3b160f8ca8b9a402a0e321ea32cc71b2b4c39 data\minecraft\tags\block\mineable\pickaxe.json
+74608cc98548c58a71fbd8912e4dfd8a64883fc8 data\minecraft\tags\block\needs_stone_tool.json

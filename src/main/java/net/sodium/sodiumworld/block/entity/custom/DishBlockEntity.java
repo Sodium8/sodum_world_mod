@@ -8,14 +8,21 @@ import net.minecraft.network.listener.ClientPlayPacketListener;
 import net.minecraft.network.packet.Packet;
 import net.minecraft.network.packet.s2c.play.BlockEntityUpdateS2CPacket;
 import net.minecraft.registry.RegistryWrapper;
+import net.minecraft.text.Text;
 import net.minecraft.util.collection.DefaultedList;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.world.World;
+import net.sodium.sodiumworld.block.entity.ImplementedGasInventory;
 import net.sodium.sodiumworld.block.entity.ImplementedInventory;
 import net.sodium.sodiumworld.block.entity.ModBlockEntities;
+import net.sodium.sodiumworld.util.GasStack;
 import org.jetbrains.annotations.Nullable;
+
+import java.util.ArrayList;
 
 public class DishBlockEntity extends BlockEntity implements ImplementedInventory {
     private final DefaultedList<ItemStack> inventory = DefaultedList.ofSize(1, ItemStack.EMPTY);
+
     private float rotation = 0;
 
     public DishBlockEntity(BlockPos pos, BlockState state) {
@@ -55,4 +62,5 @@ public class DishBlockEntity extends BlockEntity implements ImplementedInventory
     public NbtCompound toInitialChunkDataNbt(RegistryWrapper.WrapperLookup registryLookup) {
         return createNbt(registryLookup);
     }
+
 }

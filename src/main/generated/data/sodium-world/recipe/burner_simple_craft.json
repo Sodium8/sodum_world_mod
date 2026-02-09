@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "C": {
+      "item": "minecraft:coal"
+    },
+    "G": {
+      "item": "minecraft:glass"
+    }
+  },
+  "pattern": [
+    "G G",
+    "GGG",
+    " C "
+  ],
+  "result": {
+    "count": 1,
+    "id": "sodium-world:burner_block"
+  }
+}

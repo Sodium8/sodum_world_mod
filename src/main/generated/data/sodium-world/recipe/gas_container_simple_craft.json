@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "G": {
+      "item": "minecraft:glass"
+    }
+  },
+  "pattern": [
+    "GGG",
+    "G G",
+    "GGG"
+  ],
+  "result": {
+    "count": 1,
+    "id": "sodium-world:gas_container_block"
+  }
+}

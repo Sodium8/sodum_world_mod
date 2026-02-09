@@ -16,8 +16,9 @@ import net.minecraft.util.shape.VoxelShape;
 import net.minecraft.world.BlockView;
 import net.minecraft.world.World;
 import net.sodium.sodiumworld.block.ModBlocks;
+import net.sodium.sodiumworld.block.entity.ImplementedGasInventory;
 
-public class GlassBottle extends Block {
+public class GlassBottle extends Block{
     public GlassBottle(Settings settings) {
         super(settings);
     }

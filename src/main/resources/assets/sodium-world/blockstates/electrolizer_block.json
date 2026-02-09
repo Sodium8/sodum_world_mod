@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "has_water=true": {
+      "model": "sodium-world:block/electrolizer_with"
+    },
+    "has_water=false": {
+      "model": "sodium-world:block/electrolizer_without"
+    }
+  }
+}

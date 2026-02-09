@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "sodium-world:block/burner"
+    }
+  }
+}

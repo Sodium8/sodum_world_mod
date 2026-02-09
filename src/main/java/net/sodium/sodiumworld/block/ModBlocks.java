@@ -58,7 +58,13 @@ public class ModBlocks {
             new LeavesBlock(AbstractBlock.Settings.copy(Blocks.OAK_LEAVES)));
     public static final Block LEMON_SAPLING = registerBlock("lemon_sapling",
             new SaplingBlock(ModSaplingGenerators.LEMONWOOD, AbstractBlock.Settings.copy(Blocks.OAK_SAPLING)));
-    public static final Block BURNER_BLOCK = registerBlock("burner_block", new BurnerBlock(AbstractBlock.Settings.create()));
+    public static final Block BURNER_BLOCK = registerBlock("burner_block", new BurnerBlock(AbstractBlock.Settings.create().nonOpaque().sounds(BlockSoundGroup.GLASS)));
+    public static final Block GAS_CONTAINER = registerBlock("gas_container_block", new GasContainer(AbstractBlock.Settings.create().nonOpaque().sounds(BlockSoundGroup.GLASS)));
+    public static final Block ELECTROLIZER_BLOCK = registerBlock("electrolizer_block", new ElectrolizerBlock(AbstractBlock.Settings.create().nonOpaque().sounds(BlockSoundGroup.GLASS)));
+    public static final Block GAS_PIPE = registerBlock("gas_pipe", new GasPipeBlock(AbstractBlock.Settings.create().nonOpaque().sounds(BlockSoundGroup.GLASS)));
+
+
+
     private static Block registerBlock(String name, Block block){
         registerBlockItem(name, block);
         return Registry.register(Registries.BLOCK, Identifier.of(SodiumWorld.MOD_ID, name), block);

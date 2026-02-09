@@ -3,6 +3,8 @@ package net.sodium.sodiumworld.block.custom;
 import com.mojang.serialization.MapCodec;
 import net.minecraft.block.*;
 import net.minecraft.block.entity.BlockEntity;
+import net.minecraft.block.entity.BlockEntityTicker;
+import net.minecraft.block.entity.BlockEntityType;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.sound.SoundCategory;
@@ -16,6 +18,8 @@ import net.minecraft.util.shape.VoxelShape;
 import net.minecraft.util.shape.VoxelShapes;
 import net.minecraft.world.BlockView;
 import net.minecraft.world.World;
+import net.sodium.sodiumworld.block.entity.ModBlockEntities;
+import net.sodium.sodiumworld.block.entity.custom.BurnerBlockEntity;
 import net.sodium.sodiumworld.block.entity.custom.DishBlockEntity;
 import org.jetbrains.annotations.Nullable;
 
@@ -90,4 +94,5 @@ public class dish extends BlockWithEntity implements BlockEntityProvider {
 
         return ItemActionResult.SUCCESS;
     }
+
 }

@@ -26,6 +26,9 @@
   "block.sodium-world.dish": "Dish",
   "block.sodium-world.chalk_block": "Chalk",
   "block.sodium-world.sulfur": "Sulfur",
+  "block.sodium-world.burner_block": "Burner",
+  "block.sodium-world.gas_container_block": "Gas container",
+  "block.sodium-world.electrolizer_block": "Electrolizer container",
 
   "itemgroup.sodium-world.sodium_items": "Pizdozhopnie items",
 

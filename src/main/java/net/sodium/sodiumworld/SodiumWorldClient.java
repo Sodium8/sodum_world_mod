@@ -11,6 +11,7 @@ import net.minecraft.client.render.block.entity.BlockEntityRendererFactories;
 import net.sodium.sodiumworld.block.ModBlocks;
 import net.sodium.sodiumworld.block.entity.ModBlockEntities;
 import net.sodium.sodiumworld.block.entity.rederer.DishBlockEntityRenderer;
+import net.sodium.sodiumworld.client.GasContainerHud;
 import net.sodium.sodiumworld.client.ManaHudOverlay;
 import net.sodium.sodiumworld.entity.ModEntities;
 import net.sodium.sodiumworld.entity.client.CarrotCar.CarrotCarModel;
@@ -26,6 +27,7 @@ import net.sodium.sodiumworld.event.KeyInputHandler;
 import net.sodium.sodiumworld.networking.ModMessages;
 import net.sodium.sodiumworld.screen.ModScreenHandlers;
 import net.sodium.sodiumworld.screen.custom.BurnerScreen;
+import net.sodium.sodiumworld.screen.custom.ElectrolizerScreen;
 
 public class SodiumWorldClient implements ClientModInitializer {
     @Override
@@ -36,6 +38,7 @@ public class SodiumWorldClient implements ClientModInitializer {
         EntityRendererRegistry.register(ModEntities.DILDO, DildoRenderer::new);
         BlockEntityRendererFactories.register(ModBlockEntities.PEDESTAL_BE, DishBlockEntityRenderer::new);
         KeyInputHandler.register();
+        GasContainerHud.register();
         HudRenderCallback.EVENT.register(new ManaHudOverlay());
         ModMessages.registerS2CPackets();
         EntityModelLayerRegistry.registerModelLayer(CarrotCarModel.CAR_CARROT, CarrotCarModel::getTexturedModelData);
@@ -47,5 +50,6 @@ public class SodiumWorldClient implements ClientModInitializer {
         EntityModelLayerRegistry.registerModelLayer(JopaModel.JOPA, JopaModel::getTexturedModelData);
         EntityRendererRegistry.register(ModEntities.JOPA, JopaRenderer::new);
         HandledScreens.register(ModScreenHandlers.BURNER_SCREEN_HANDLER, BurnerScreen::new);
+        HandledScreens.register(ModScreenHandlers.ELECTROLIZER_SCREEN_HANDLER, ElectrolizerScreen::new);
     }
 }

@@ -6,11 +6,8 @@ import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
 import net.sodium.sodiumworld.SodiumWorld;
 import net.sodium.sodiumworld.block.ModBlocks;
-import net.sodium.sodiumworld.block.custom.BurnerBlock;
-import net.sodium.sodiumworld.block.entity.custom.BurnerBlockEntity;
-import net.sodium.sodiumworld.block.entity.custom.DishBlockEntity;
-import net.sodium.sodiumworld.block.entity.custom.LemonCropEntity;
-import net.sodium.sodiumworld.block.entity.custom.PenisVirusEntity;
+import net.sodium.sodiumworld.block.custom.GasPipeBlock;
+import net.sodium.sodiumworld.block.entity.custom.*;
 
 public class ModBlockEntities {
     public static final BlockEntityType<DishBlockEntity> PEDESTAL_BE =
@@ -33,6 +30,24 @@ public class ModBlockEntities {
                     Registries.BLOCK_ENTITY_TYPE,
                     Identifier.of(SodiumWorld.MOD_ID, "burner_block_entity"),
                     BlockEntityType.Builder.create(BurnerBlockEntity::new, ModBlocks.BURNER_BLOCK).build(null)
+            );
+    public static BlockEntityType<GasContainerEntity> GAS_CONTAINER_ENTITY =
+            Registry.register(
+                    Registries.BLOCK_ENTITY_TYPE,
+                    Identifier.of(SodiumWorld.MOD_ID, "gas_container_entity"),
+                    BlockEntityType.Builder.create(GasContainerEntity::new, ModBlocks.GAS_CONTAINER).build(null)
+            );
+    public static BlockEntityType<ElectrolizerBlockEntity> ELECTROLIZER_BLOCK_ENTITY =
+            Registry.register(
+                    Registries.BLOCK_ENTITY_TYPE,
+                    Identifier.of(SodiumWorld.MOD_ID, "electrolizer_block_entity"),
+                    BlockEntityType.Builder.create(ElectrolizerBlockEntity::new, ModBlocks.ELECTROLIZER_BLOCK).build(null)
+            );
+    public static BlockEntityType<GasPipeEntity> GAS_PIPE_ENTITY =
+            Registry.register(
+                    Registries.BLOCK_ENTITY_TYPE,
+                    Identifier.of(SodiumWorld.MOD_ID, "gas_pipe_block_entity"),
+                    BlockEntityType.Builder.create(GasPipeEntity::new, ModBlocks.GAS_PIPE).build(null)
             );
 
     public static void registerBlockEntities() {

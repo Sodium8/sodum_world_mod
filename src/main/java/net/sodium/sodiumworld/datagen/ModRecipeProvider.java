@@ -108,5 +108,30 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .input('W', ModItems.PORTAL_FLUID)
                 .criterion(hasItem(ModItems.PORTAL_FLUID), conditionsFromItem(ModItems.PORTAL_FLUID))
                 .offerTo(recipeExporter, Identifier.of(SodiumWorld.MOD_ID, "portal_gun_simple_craft"));
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.GAS_CONTAINER)
+                .pattern("GGG")
+                .pattern("G G")
+                .pattern("GGG")
+                .input('G', Items.GLASS)
+                .criterion(hasItem(Items.GLASS), conditionsFromItem(Items.GLASS))
+                .offerTo(recipeExporter, Identifier.of(SodiumWorld.MOD_ID, "gas_container_simple_craft"));
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.BURNER_BLOCK)
+                .pattern("G G")
+                .pattern("GGG")
+                .pattern(" C ")
+                .input('G', Items.GLASS)
+                .criterion(hasItem(Items.GLASS), conditionsFromItem(Items.GLASS))
+                .input('C', Items.COAL)
+                .criterion(hasItem(Items.COAL), conditionsFromItem(Items.COAL))
+                .offerTo(recipeExporter, Identifier.of(SodiumWorld.MOD_ID, "burner_simple_craft"));
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.ELECTROLIZER_BLOCK)
+                .pattern("G G")
+                .pattern("GGG")
+                .pattern("R R")
+                .input('G', Items.GLASS)
+                .criterion(hasItem(Items.GLASS), conditionsFromItem(Items.GLASS))
+                .input('R', Blocks.REDSTONE_WIRE)
+                .criterion(hasItem(Blocks.REDSTONE_WIRE), conditionsFromItem(Blocks.REDSTONE_WIRE))
+                .offerTo(recipeExporter, Identifier.of(SodiumWorld.MOD_ID, "electrolizer_simple_craft"));
     }
 }

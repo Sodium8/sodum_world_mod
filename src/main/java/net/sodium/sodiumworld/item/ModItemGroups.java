@@ -30,17 +30,20 @@ public class ModItemGroups {
                         entries.add(ModBlocks.PENIS_BLOCK);
                         entries.add(ModBlocks.PENIS_HOLDER_BLOCK);
                         entries.add(ModBlocks.BROKEN_PENIS_BLOCK);
+                        entries.add(ModBlocks.PENIS_VIRUS_BLOCK);
                         entries.add(ModBlocks.IRON_DILDO);
                         entries.add(ModBlocks.LEMON_SAPLING);
                         entries.add(ModBlocks.LEMON_LEAVES);
-                        entries.add(ModBlocks.PENIS_VIRUS_BLOCK);
                         entries.add(ModBlocks.DISH);
                         entries.add(ModBlocks.GLASS_BOTTLE);
-                        entries.add(ModBlocks.CHALK);
-                        entries.add(ModBlocks.SULFUR);
                         entries.add(ModBlocks.GLASS_BOTTLE_WITH_SUGAR);
                         entries.add(ModBlocks.GLASS_BOTTLE_WITH_SUGAR_AND_SPARKLING_WATER);
                         entries.add(ModBlocks.GLASS_BOTTLE_WITH_LEMONADE);
+                        entries.add(ModBlocks.CHALK);
+                        entries.add(ModBlocks.SULFUR);
+                        entries.add(ModBlocks.GAS_CONTAINER);
+                        entries.add(ModBlocks.BURNER_BLOCK);
+                        entries.add(ModBlocks.ELECTROLIZER_BLOCK);
                     }).build());
     public static void registerItemGroups() {
         SodiumWorld.LOGGER.info("Registering Item Groups for" + SodiumWorld.MOD_ID);

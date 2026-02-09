@@ -40,6 +40,10 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.GLASS_BOTTLE_WITH_SUGAR);
         addDrop(ModBlocks.GLASS_BOTTLE_WITH_SUGAR_AND_SPARKLING_WATER);
         addDrop(ModBlocks.CHALK);
+        addDrop(ModBlocks.BURNER_BLOCK);
+        addDrop(ModBlocks.GAS_CONTAINER);
+        addDrop(ModBlocks.ELECTROLIZER_BLOCK);
+        addDrop(ModBlocks.GAS_PIPE);
         addDrop(ModBlocks.DISH);
         addDrop(ModBlocks.LEMON_SAPLING);
         addDrop(ModBlocks.LEMON_LEAVES, leavesDrops(ModBlocks.LEMON_LEAVES, ModBlocks.LEMON_SAPLING, 0.06f));
