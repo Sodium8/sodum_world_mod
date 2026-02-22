@@ -1,7 +1,9 @@
 package net.sodium.sodiumworld.block.entity.custom;
 
 import net.fabricmc.fabric.api.networking.v1.ServerPlayNetworking;
+import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
+import net.minecraft.block.Blocks;
 import net.minecraft.block.entity.BlockEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.nbt.NbtCompound;
@@ -11,7 +13,8 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import net.sodium.sodiumworld.block.entity.ImplementedGasInventory;
 import net.sodium.sodiumworld.block.entity.ModBlockEntities;
-import net.sodium.sodiumworld.block.entity.custom.NBTUtils.GasContainerNBTUtil;
+import net.sodium.sodiumworld.block.entity.custom.Utils.GasContainerNBTUtil;
+import net.sodium.sodiumworld.block.entity.custom.Utils.GasRecipeCondition;
 import net.sodium.sodiumworld.networking.packet.SyncGasS2CPacket;
 import net.sodium.sodiumworld.util.GasRecipe;
 import net.sodium.sodiumworld.util.GasStack;
@@ -29,7 +32,7 @@ public class GasContainerEntity extends BlockEntity implements ImplementedGasInv
         input.add(new GasStack("oxygen", 1));
         List<GasStack> output = new ArrayList<>();
         output.add(new GasStack("sulfuric_trioxide", 2));
-        this.gasRecipes.add(new GasRecipe(this, input, output));
+        this.gasRecipes.add(new GasRecipe(this, input, output, new GasRecipeCondition<Block, BlockPos>("block_is", Blocks.FIRE, new BlockPos(0, -1, 0))));
     }
     private ArrayList<GasStack> gasInventory = new ArrayList<>();  // ← индивидуальный инвентарь
     private float maxSize = 1000;

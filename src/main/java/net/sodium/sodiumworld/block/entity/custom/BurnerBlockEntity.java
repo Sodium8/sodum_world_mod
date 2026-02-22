@@ -62,7 +62,7 @@ public class BurnerBlockEntity extends BlockEntity implements ImplementedInvento
         BlockEntity aboveEntity = world.getBlockEntity(abovePos);
         if (this.getWorld().getBlockState(this.getPos().add(0, 1, 0)).getBlock().getDefaultState().isIn(ModTags.Blocks.CONTAIN_GAS)) {
             if (aboveEntity instanceof ImplementedGasInventory gas_inv) {
-                if (gas_inv.canAdd(300)) {
+                if (gas_inv.canAdd("sulfuric_dioxide", 300)) {
                     if (recipes.getFirst().try_craft(l1)) {
                         if (this.current_reaction_id != 0) {
                             this.current_reaction_id = 0;

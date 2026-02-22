@@ -31,11 +31,13 @@ public class GasPumpEntity extends BlockEntity{
         if (be1 instanceof ImplementedGasInventory igi1) {
             if (be2 instanceof ImplementedGasInventory igi2) {
                 if (!igi2.getGasInventory().isEmpty()) {
-                    float decrement_count = Math.min(Math.min(igi1.leftFreePlace(), igi2.
-                            getGasInventory().getFirst().getVolume()), 10);
-                    String id = igi2.getGasInventory().getFirst().getId();
-                    igi2.addGas(be2, id, -decrement_count);
-                    igi1.addGas(be1, id, decrement_count);
+                    if (igi1.canAdd(igi2.getGasInventory().getFirst().getId(), 0)) {
+                        float decrement_count = Math.min(Math.min(igi1.leftFreePlace(), igi2.
+                                getGasInventory().getFirst().getVolume()), 10);
+                        String id = igi2.getGasInventory().getFirst().getId();
+                        igi2.addGas(be2, id, -decrement_count);
+                        igi1.addGas(be1, id, decrement_count);
+                    }
                 }
             }
         }

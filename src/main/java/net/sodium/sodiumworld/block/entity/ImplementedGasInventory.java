@@ -9,13 +9,12 @@ import java.util.Objects;
 
 public interface ImplementedGasInventory {
     ArrayList<GasStack> getGasInventory();
-
     float getMaxSize();
 
     default void addGas(BlockEntity be, String id, float amount) {
         ArrayList<GasStack> inv = getGasInventory();
 
-        if (this.canAdd(amount)) {
+        if (this.canAdd(id, amount)) {
             boolean added = false;
             for (GasStack stack : inv) {
                 if (stack.getId().equals(id)) {
@@ -31,7 +30,7 @@ public interface ImplementedGasInventory {
         }
     }
 
-    default boolean canAdd(float amount) {
+    default boolean canAdd(String id, float amount) {
         ArrayList<GasStack> inv = getGasInventory();
 
         float sum = 0;

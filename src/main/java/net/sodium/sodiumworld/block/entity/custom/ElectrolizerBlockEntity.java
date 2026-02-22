@@ -26,7 +26,6 @@ import net.sodium.sodiumworld.block.entity.ImplementedGasInventory;
 import net.sodium.sodiumworld.block.entity.ImplementedInventory;
 import net.sodium.sodiumworld.block.entity.ModBlockEntities;
 import net.sodium.sodiumworld.screen.custom.ElectrolizerScreenHandler;
-import net.sodium.sodiumworld.util.ModTags;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.ArrayList;

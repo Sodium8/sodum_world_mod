@@ -63,6 +63,7 @@ public class ModBlocks {
     public static final Block ELECTROLIZER_BLOCK = registerBlock("electrolizer_block", new ElectrolizerBlock(AbstractBlock.Settings.create().nonOpaque().sounds(BlockSoundGroup.GLASS)));
     public static final Block GAS_PIPE = registerBlock("gas_pipe", new GasPipeBlock(AbstractBlock.Settings.create().nonOpaque().sounds(BlockSoundGroup.GLASS)));
     public static final Block GAS_PUMP = registerBlock("gas_pump", new GasPumpBlock(AbstractBlock.Settings.create().nonOpaque().sounds(BlockSoundGroup.GLASS)));
+    public static final Block GAS_FILTER = registerBlock("gas_filter_block", new GasFilter(AbstractBlock.Settings.create().nonOpaque().sounds(BlockSoundGroup.GLASS)));
 
 
 

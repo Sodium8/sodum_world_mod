@@ -12,7 +12,7 @@ import net.minecraft.world.World;
 import net.sodium.sodiumworld.block.custom.GasPipeBlock;
 import net.sodium.sodiumworld.block.entity.ImplementedGasInventory;
 import net.sodium.sodiumworld.block.entity.ModBlockEntities;
-import net.sodium.sodiumworld.block.entity.custom.NBTUtils.GasContainerNBTUtil;
+import net.sodium.sodiumworld.block.entity.custom.Utils.GasContainerNBTUtil;
 import net.sodium.sodiumworld.networking.packet.SyncGasS2CPacket;
 import net.sodium.sodiumworld.util.GasStack;
 import org.joml.Vector3f;
@@ -61,10 +61,12 @@ public class GasPipeEntity extends BlockEntity implements ImplementedGasInventor
         if (!blockEntity.getGasInventory().isEmpty()){
             BlockEntity be = world.getBlockEntity(pos.add(blockEntity.offset));
             if (be instanceof ImplementedGasInventory igi) {
-                GasStack decrementer = new GasStack(blockEntity.getGasInventory().getFirst().getId(),
-                        -Math.min(blockEntity.getGasInventory().getFirst().getVolume(), 10));
-                blockEntity.addGas(blockEntity, decrementer.getId(), decrementer.getVolume());
-                igi.addGas(be, decrementer.getId(), -decrementer.getVolume());
+                if (igi.canAdd(blockEntity.getGasInventory().getFirst().getId(), 0)) {
+                    GasStack decrementer = new GasStack(blockEntity.getGasInventory().getFirst().getId(),
+                            -Math.min(Math.min(blockEntity.getGasInventory().getFirst().getVolume(), 10), igi.leftFreePlace()));
+                    blockEntity.addGas(blockEntity, decrementer.getId(), decrementer.getVolume());
+                    igi.addGas(be, decrementer.getId(), -decrementer.getVolume());
+                }
             }
         }
     }

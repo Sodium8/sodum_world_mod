@@ -1,6 +1,5 @@
 package net.sodium.sodiumworld.block.custom;
 
-import com.mojang.serialization.MapCodec;
 import net.minecraft.block.*;
 import net.minecraft.block.entity.BlockEntity;
 import net.minecraft.block.entity.BlockEntityTicker;
@@ -28,7 +27,7 @@ import org.jetbrains.annotations.Nullable;
 import java.util.List;
 import java.util.Objects;
 
-import static net.sodium.sodiumworld.block.entity.custom.NBTUtils.GasContainerNBTUtil.getGasName;
+import static net.sodium.sodiumworld.block.entity.custom.Utils.GasContainerNBTUtil.getGasName;
 
 
 public class GasContainer extends Block implements BlockEntityProvider {

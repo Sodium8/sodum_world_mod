@@ -1,4 +1,4 @@
-package net.sodium.sodiumworld.block.entity.custom.NBTUtils;
+package net.sodium.sodiumworld.block.entity.custom.Utils;
 
 import net.minecraft.block.entity.BlockEntity;
 import net.minecraft.nbt.NbtCompound;
